@@ -26,6 +26,7 @@ class StartAppViewController: BaseViewController {
 //        imageView.center = view.center
 //        view.addSubview(imageView)
 //        self.view.sendSubviewToBack(imageView)
+        print("Test")
         
     }
     
