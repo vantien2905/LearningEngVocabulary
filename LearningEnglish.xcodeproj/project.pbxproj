@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		51E88EEB914F7B14ECBD46B7 /* Pods_LearningEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB74314B60C719C34F0375BE /* Pods_LearningEnglish.framework */; };
+		DEE914751FAF03F500FA9B63 /* LEVBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE914741FAF03F500FA9B63 /* LEVBaseCollectionViewCell.swift */; };
+		DEE914791FAF080F00FA9B63 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE914781FAF080F00FA9B63 /* UIViewX.swift */; };
 		FD1B0F4E1FAEABC400B9321D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B0F4C1FAEABC400B9321D /* LogInViewController.swift */; };
 		FD1B0F4F1FAEABC400B9321D /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1B0F4D1FAEABC400B9321D /* LogInViewController.xib */; };
 		FD1B0F511FAEAE5A00B9321D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B0F501FAEAE5A00B9321D /* UIViewController+Extension.swift */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		AB74314B60C719C34F0375BE /* Pods_LearningEnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearningEnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C2282A506E4C5F71A94DF3 /* Pods-LearningEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningEnglish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish.debug.xcconfig"; sourceTree = "<group>"; };
+		DEE914741FAF03F500FA9B63 /* LEVBaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEVBaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		DEE914781FAF080F00FA9B63 /* UIViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		F76C6920FA06C5880C044AFC /* Pods-LearningEnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningEnglish.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish.release.xcconfig"; sourceTree = "<group>"; };
 		FD1B0F4C1FAEABC400B9321D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		FD1B0F4D1FAEABC400B9321D /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
@@ -75,6 +79,22 @@
 				F76C6920FA06C5880C044AFC /* Pods-LearningEnglish.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DEE914731FAF031B00FA9B63 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DEE914741FAF03F500FA9B63 /* LEVBaseCollectionViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		DEE914771FAF080100FA9B63 /* UIViewX */ = {
+			isa = PBXGroup;
+			children = (
+				DEE914781FAF080F00FA9B63 /* UIViewX.swift */,
+			);
+			path = UIViewX;
 			sourceTree = "<group>";
 		};
 		E196BD26F0C814D9F10BBACC /* Frameworks */ = {
@@ -223,6 +243,7 @@
 		FDCC28A41FA07710009728F1 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				DEE914771FAF080100FA9B63 /* UIViewX */,
 				FD1B0F591FAEB96B00B9321D /* LEVTextField */,
 				FD1B0F561FAEB92100B9321D /* BaseView */,
 			);
@@ -232,6 +253,7 @@
 		FDCC28A51FA07724009728F1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				DEE914731FAF031B00FA9B63 /* Base */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -279,6 +301,7 @@
 				FDCC28831FA075B2009728F1 /* Resources */,
 				4F308E821007528EBB139150 /* [CP] Embed Pods Frameworks */,
 				7D1E0E12DCC2A5A25E63E082 /* [CP] Copy Pods Resources */,
+				DEE914761FAF044700FA9B63 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -375,6 +398,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DEE914761FAF044700FA9B63 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 		E90FFA3E3C57124F0933805B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -408,7 +444,9 @@
 				FD1B0F581FAEB93700B9321D /* LEVBaseView.swift in Sources */,
 				FD1B0F5D1FAEBA4F00B9321D /* UIView+Extension.swift in Sources */,
 				FDCC28B21FA08EFE009728F1 /* Enum.swift in Sources */,
+				DEE914791FAF080F00FA9B63 /* UIViewX.swift in Sources */,
 				FD1B0F4E1FAEABC400B9321D /* LogInViewController.swift in Sources */,
+				DEE914751FAF03F500FA9B63 /* LEVBaseCollectionViewCell.swift in Sources */,
 				FDCC28B01FA07E20009728F1 /* Constant.swift in Sources */,
 				FDCC28AA1FA07A5B009728F1 /* StartAppViewController.swift in Sources */,
 				FD1B0F601FAECE3300B9321D /* SignUpViewController.swift in Sources */,

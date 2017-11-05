@@ -33,7 +33,5 @@ class LogInViewController: BaseViewController {
         btEnter.layer.cornerRadius = 5
 //        self.navigationItem.hidesBackButton = true
     }
-    
-    
 
 }

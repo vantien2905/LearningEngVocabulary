@@ -1,0 +1,12 @@
+disabled_rules: # rule identifiers to exclude from running
+  - line_length
+  - variable_name
+  - trailing_whitespace
+  - force_cast
+  - shorthand_operator
+  - type_name
+
+opt_in_rules: 
+  
+excluded:
+  - Pods

@@ -8,6 +8,7 @@
 
 import UIKit
 public extension UIViewController {
+   
     class func initControllerFromNib() -> UIViewController {
         let isNib: Bool = Bundle.main.path(forResource: self.className, ofType: "nib") != nil
         guard isNib else {
@@ -32,4 +33,3 @@ extension UIViewController {
     }
     
 }
-

@@ -19,7 +19,7 @@ class BaseViewController: UIViewController {
     }
     func setUpView() {}
     
-    func setupNavigation(){
+    func setupNavigation() {
         self.navigationController?.navigationBar.barTintColor = LEVColor.naviBarColor
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.isHidden = false
