@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogInViewController" customModule="LearningEnglish" customModuleProvider="target">
+            <connections>
+                <outlet property="btEnter" destination="cbE-Sa-1lJ" id="dg1-87-Khx"/>
+                <outlet property="tfPassWord" destination="Rns-Xh-2MO" id="Qaa-ET-qNm"/>
+                <outlet property="tfUserName" destination="3PJ-2V-1dv" id="MqY-ic-2BW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3PJ-2V-1dv" customClass="LEVTextField" customModule="LearningEnglish" customModuleProvider="target">
+                    <rect key="frame" x="20" y="60" width="335" height="80"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="LdU-zc-2yR"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rns-Xh-2MO" customClass="LEVTextField" customModule="LearningEnglish" customModuleProvider="target">
+                    <rect key="frame" x="20" y="180" width="335" height="80"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbE-Sa-1lJ">
+                    <rect key="frame" x="104" y="300" width="167.5" height="50"/>
+                    <color key="backgroundColor" red="0.22352941176470587" green="0.70980392156862748" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="A0O-Zv-38j"/>
+                    </constraints>
+                    <state key="normal" title="Enter">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnEnter" destination="-1" eventType="touchUpInside" id="a3t-te-R74"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWm-wH-Kzx">
+                    <rect key="frame" x="122" y="370" width="131.5" height="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cbE-Sa-1lJ" firstAttribute="top" secondItem="Rns-Xh-2MO" secondAttribute="bottom" constant="40" id="3de-vc-VDc"/>
+                <constraint firstItem="cbE-Sa-1lJ" firstAttribute="width" secondItem="Rns-Xh-2MO" secondAttribute="width" multiplier="1/2" id="Akf-b1-q6H"/>
+                <constraint firstItem="3PJ-2V-1dv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="Amh-vN-WSK"/>
+                <constraint firstItem="Rns-Xh-2MO" firstAttribute="height" secondItem="3PJ-2V-1dv" secondAttribute="height" id="CY4-kx-Aiy"/>
+                <constraint firstItem="Rns-Xh-2MO" firstAttribute="top" secondItem="3PJ-2V-1dv" secondAttribute="bottom" constant="40" id="EIA-Re-coc"/>
+                <constraint firstItem="Rns-Xh-2MO" firstAttribute="leading" secondItem="3PJ-2V-1dv" secondAttribute="leading" id="Jqg-dn-Am1"/>
+                <constraint firstItem="iWm-wH-Kzx" firstAttribute="centerX" secondItem="cbE-Sa-1lJ" secondAttribute="centerX" id="Keg-dD-BWe"/>
+                <constraint firstItem="Rns-Xh-2MO" firstAttribute="width" secondItem="3PJ-2V-1dv" secondAttribute="width" id="TPT-rf-9rQ"/>
+                <constraint firstItem="cbE-Sa-1lJ" firstAttribute="centerX" secondItem="Rns-Xh-2MO" secondAttribute="centerX" id="jZx-M4-VN5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3PJ-2V-1dv" secondAttribute="trailing" constant="20" id="mus-IZ-Sv6"/>
+                <constraint firstItem="iWm-wH-Kzx" firstAttribute="top" secondItem="cbE-Sa-1lJ" secondAttribute="bottom" constant="20" id="wCg-5w-8lG"/>
+                <constraint firstItem="3PJ-2V-1dv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="xn8-AE-ME3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

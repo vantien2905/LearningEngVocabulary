@@ -25,7 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func goToStartApp() {
-        let vc  = StartAppViewController(nibName: "StartAppViewController", bundle: Bundle.main) //UINavigationController(rootViewController: StartAppViewController())
+        let vc  = UINavigationController(rootViewController: StartAppViewController())
+//            StartAppViewController(nibName: "StartAppViewController", bundle: Bundle.main)
         window?.rootViewController = vc
     }
 

@@ -12,10 +12,12 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = LEVColor.whiteColor
+//        self.view.backgroundColor = LEVColor.whiteColor
         setupNavigation()
+        setUpView()
         // Do any additional setup after loading the view.
     }
+    func setUpView() {}
     
     func setupNavigation(){
         self.navigationController?.navigationBar.barTintColor = LEVColor.naviBarColor

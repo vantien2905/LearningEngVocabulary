@@ -10,8 +10,11 @@ import Foundation
 import UIKit
 struct LEVColor {
     static let whiteColor = UIColor.white
+    static let blackColor = UIColor.black
     static let naviBarColor = UIColor(red: 0.11, green: 0.58, blue: 0.45, alpha: 1)
     static let blueColor = UIColor(red: 0.22, green: 0.71, blue: 0.29, alpha: 1)
+    static let grayColor = UIColor(red: 216/255, green: 216/255, blue: 216/255, alpha: 1)
+    static let lineColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1)
 }
 
 struct LEVFont {

@@ -7,9 +7,20 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class StartAppViewController: BaseViewController {
-
+    @IBAction func btnLogIn() {
+        let vc = LogInViewController.initControllerFromNib()
+        self.push(controller: vc)
+        
+    }
+    
+    @IBAction func btnSignUp() {
+        let vc = SignUpViewController.initControllerFromNib()
+        self.push(controller: vc)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -17,18 +28,14 @@ class StartAppViewController: BaseViewController {
     }
     func setupView() {
         setTitle(title: "Login")
-//        let background = UIImage(named: "eng_background")
-//        var imageView : UIImageView!
-//        imageView = UIImageView(frame: view.bounds)
-//        imageView.contentMode =  UIViewContentMode.scaleAspectFill
-//        imageView.clipsToBounds = true
-//        imageView.image = background
-//        imageView.center = view.center
-//        view.addSubview(imageView)
-//        self.view.sendSubviewToBack(imageView)
+        
         print("Test")
         
     }
-    
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
 }

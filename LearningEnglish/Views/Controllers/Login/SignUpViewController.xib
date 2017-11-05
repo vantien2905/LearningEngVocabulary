@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="LearningEnglish" customModuleProvider="target">
+            <connections>
+                <outlet property="btnEnter" destination="sdb-Uq-xlv" id="15h-4n-b7d"/>
+                <outlet property="tfEmail" destination="AON-Ck-aP2" id="Iet-Vx-rS8"/>
+                <outlet property="tfPassword" destination="VMM-o8-Wwz" id="FaC-mG-bPy"/>
+                <outlet property="tfRetypePassword" destination="J5S-mi-evt" id="81F-Hj-qde"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AON-Ck-aP2" customClass="LEVTextField" customModule="LearningEnglish" customModuleProvider="target">
+                    <rect key="frame" x="20" y="60" width="335" height="80"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="eVC-gQ-gUn"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMM-o8-Wwz" customClass="LEVTextField" customModule="LearningEnglish" customModuleProvider="target">
+                    <rect key="frame" x="20" y="180" width="335" height="80"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J5S-mi-evt" customClass="LEVTextField" customModule="LearningEnglish" customModuleProvider="target">
+                    <rect key="frame" x="20" y="300" width="335" height="80"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdb-Uq-xlv">
+                    <rect key="frame" x="104" y="420" width="167.5" height="50"/>
+                    <color key="backgroundColor" red="0.22352941176470587" green="0.70980392156862748" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="UgP-3C-Vl4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Enter">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sdb-Uq-xlv" firstAttribute="width" secondItem="J5S-mi-evt" secondAttribute="width" multiplier="1/2" id="1BU-C9-8aE"/>
+                <constraint firstItem="sdb-Uq-xlv" firstAttribute="centerX" secondItem="J5S-mi-evt" secondAttribute="centerX" id="3g8-Q3-K72"/>
+                <constraint firstItem="AON-Ck-aP2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="76C-Ff-zW0"/>
+                <constraint firstItem="AON-Ck-aP2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="7Mc-Wq-qx3"/>
+                <constraint firstItem="J5S-mi-evt" firstAttribute="top" secondItem="VMM-o8-Wwz" secondAttribute="bottom" constant="40" id="Gl5-bE-bss"/>
+                <constraint firstItem="J5S-mi-evt" firstAttribute="height" secondItem="VMM-o8-Wwz" secondAttribute="height" id="WAn-HA-KqN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AON-Ck-aP2" secondAttribute="trailing" constant="20" id="X6W-rw-9La"/>
+                <constraint firstItem="VMM-o8-Wwz" firstAttribute="trailing" secondItem="AON-Ck-aP2" secondAttribute="trailing" id="Y9A-zl-0Ey"/>
+                <constraint firstItem="sdb-Uq-xlv" firstAttribute="top" secondItem="J5S-mi-evt" secondAttribute="bottom" constant="40" id="YBH-Fs-snW"/>
+                <constraint firstItem="J5S-mi-evt" firstAttribute="trailing" secondItem="VMM-o8-Wwz" secondAttribute="trailing" id="i2I-ZF-52z"/>
+                <constraint firstItem="VMM-o8-Wwz" firstAttribute="leading" secondItem="AON-Ck-aP2" secondAttribute="leading" id="jg5-7e-Nfn"/>
+                <constraint firstItem="VMM-o8-Wwz" firstAttribute="top" secondItem="AON-Ck-aP2" secondAttribute="bottom" constant="40" id="m9B-Fy-cIn"/>
+                <constraint firstItem="VMM-o8-Wwz" firstAttribute="height" secondItem="AON-Ck-aP2" secondAttribute="height" id="mVT-7q-dBV"/>
+                <constraint firstItem="J5S-mi-evt" firstAttribute="leading" secondItem="VMM-o8-Wwz" secondAttribute="leading" id="tyx-ui-3Zg"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

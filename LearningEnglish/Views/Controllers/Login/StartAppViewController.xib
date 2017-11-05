@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,33 +20,54 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzQ-Si-UXY">
-                    <rect key="frame" x="30" y="170" width="315" height="50"/>
-                    <color key="backgroundColor" red="0.22352941176470587" green="0.70980392156862748" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="30" y="357" width="315" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="fSy-y5-gcG"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="User Login">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="btnLogIn" destination="-1" eventType="touchUpInside" id="nPD-P7-UM8"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfo-e2-C9o">
-                    <rect key="frame" x="30" y="270" width="315" height="50"/>
-                    <color key="backgroundColor" red="0.22352941176470587" green="0.70980392156862748" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="30" y="437" width="315" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="New User Sign Up">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="btnSignUp" destination="-1" eventType="touchUpInside" id="h9u-c5-YP4"/>
+                    </connections>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoLEV" translatesAutoresizingMaskIntoConstraints="NO" id="GKc-iW-pN3">
+                    <rect key="frame" x="37.5" y="27" width="300" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="Igo-Sc-Cb0"/>
+                        <constraint firstAttribute="width" constant="300" id="m80-qM-akJ"/>
+                    </constraints>
+                </imageView>
             </subviews>
+            <color key="backgroundColor" red="0.22352941176470587" green="0.70980392156862748" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="Sfo-e2-C9o" firstAttribute="centerX" secondItem="wzQ-Si-UXY" secondAttribute="centerX" id="1Nd-M8-pfB"/>
                 <constraint firstItem="Sfo-e2-C9o" firstAttribute="height" secondItem="wzQ-Si-UXY" secondAttribute="height" id="9xG-8d-tIg"/>
                 <constraint firstItem="wzQ-Si-UXY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="JZZ-ax-MGb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wzQ-Si-UXY" secondAttribute="trailing" constant="30" id="L8Q-cB-eGX"/>
-                <constraint firstItem="Sfo-e2-C9o" firstAttribute="top" secondItem="wzQ-Si-UXY" secondAttribute="bottom" constant="50" id="axS-4L-maL"/>
+                <constraint firstItem="wzQ-Si-UXY" firstAttribute="top" secondItem="GKc-iW-pN3" secondAttribute="bottom" constant="30" id="RDs-hZ-TFp"/>
+                <constraint firstItem="Sfo-e2-C9o" firstAttribute="top" secondItem="wzQ-Si-UXY" secondAttribute="bottom" constant="30" id="axS-4L-maL"/>
                 <constraint firstItem="Sfo-e2-C9o" firstAttribute="width" secondItem="wzQ-Si-UXY" secondAttribute="width" id="fPS-Kt-RXv"/>
-                <constraint firstItem="wzQ-Si-UXY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="150" id="gYv-OF-HR2"/>
+                <constraint firstItem="GKc-iW-pN3" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="lQi-a3-TPL"/>
+                <constraint firstItem="GKc-iW-pN3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="7" id="zgl-DK-NZS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
+    <resources>
+        <image name="LogoLEV" width="998" height="999"/>
+    </resources>
 </document>
