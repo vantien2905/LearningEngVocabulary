@@ -1,0 +1,11 @@
+readonly false
+verbose false
+platform "ios"
+
+username 			ENV["APPLE_USER_NAME"] 		#ngocduong2310@gmail.com
+app_identifier 		ENV["APP_ID"]			#kai.com.learningenglish
+git_url 			ENV["GIT_CERT_URL"]		#git@github.com:KaiPham1992/kai_certs.git
+git_branch 			ENV["GIT_CERT_BRANCH"]		#master
+team_id 			ENV["APPLE_TEAM_ID"]		#KGRXCGAUA5
+
+#type: appstore, adhoc, development, enterprise

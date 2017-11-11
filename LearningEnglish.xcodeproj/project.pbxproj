@@ -34,6 +34,7 @@
 /* Begin PBXFileReference section */
 		AB74314B60C719C34F0375BE /* Pods_LearningEnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearningEnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C2282A506E4C5F71A94DF3 /* Pods-LearningEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningEnglish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish.debug.xcconfig"; sourceTree = "<group>"; };
+		BC724E86A9F9BC8A97BA0F13 /* Pods-LearningEnglish.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningEnglish.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish.appstore.xcconfig"; sourceTree = "<group>"; };
 		DEE914741FAF03F500FA9B63 /* LEVBaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEVBaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		DEE914781FAF080F00FA9B63 /* UIViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		F76C6920FA06C5880C044AFC /* Pods-LearningEnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningEnglish.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +78,7 @@
 			children = (
 				B7C2282A506E4C5F71A94DF3 /* Pods-LearningEnglish.debug.xcconfig */,
 				F76C6920FA06C5880C044AFC /* Pods-LearningEnglish.release.xcconfig */,
+				BC724E86A9F9BC8A97BA0F13 /* Pods-LearningEnglish.appstore.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -324,7 +326,7 @@
 				TargetAttributes = {
 					FDCC28841FA075B2009728F1 = {
 						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -476,6 +478,75 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DEC9CD481FB6E1E40095EF8A /* Appstore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Appstore;
+		};
+		DEC9CD491FB6E1E40095EF8A /* Appstore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC724E86A9F9BC8A97BA0F13 /* Pods-LearningEnglish.appstore.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KGRXCGAUA5;
+				INFOPLIST_FILE = LearningEnglish/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kai.com.learningenglish;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f8944ce4-a389-4cd8-bd2c-b420774d6ef0";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore kai.com.learningenglish";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Appstore;
+		};
 		FDCC28951FA075B2009728F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -588,11 +659,14 @@
 			baseConfigurationReference = B7C2282A506E4C5F71A94DF3 /* Pods-LearningEnglish.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KGRXCGAUA5;
 				INFOPLIST_FILE = LearningEnglish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vinova.LearningEnglish;
+				PRODUCT_BUNDLE_IDENTIFIER = kai.com.learningenglish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "837b5644-189c-4e0c-9ecc-a52476c54d26";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development kai.com.learningenglish";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -603,11 +677,15 @@
 			baseConfigurationReference = F76C6920FA06C5880C044AFC /* Pods-LearningEnglish.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KGRXCGAUA5;
 				INFOPLIST_FILE = LearningEnglish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vinova.LearningEnglish;
+				PRODUCT_BUNDLE_IDENTIFIER = kai.com.learningenglish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "837b5644-189c-4e0c-9ecc-a52476c54d26";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development kai.com.learningenglish";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -621,6 +699,7 @@
 			buildConfigurations = (
 				FDCC28951FA075B2009728F1 /* Debug */,
 				FDCC28961FA075B2009728F1 /* Release */,
+				DEC9CD481FB6E1E40095EF8A /* Appstore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -630,6 +709,7 @@
 			buildConfigurations = (
 				FDCC28981FA075B2009728F1 /* Debug */,
 				FDCC28991FA075B2009728F1 /* Release */,
+				DEC9CD491FB6E1E40095EF8A /* Appstore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

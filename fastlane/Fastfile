@@ -1,0 +1,55 @@
+# Customise this file, documentation can be found here:
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+import "./BaseFastfile"
+
+fastlane_version "1.91.0"
+default_platform :ios
+platform :ios do
+
+  ############################# LANES ##############################
+
+  lane :build do
+    gym(
+      silent:           true,
+      clean:            true,
+      output_directory: "./build",
+      output_name:      ENV["APP_NAME"],
+      export_method:    ENV["EXPORT_METHOD"],
+      workspace:        ENV["WORKSPACE"],
+      scheme:           ENV["SCHEME"],
+      configuration:    ENV["CONFIGURATION"]
+    )
+  end
+  
+  ######
+
+  lane :deploy_fabric do
+    ENV["DEPLOY"] = "true" # Need to enable this propert only
+    
+    crashlytics(
+      ipa_path:     "./build/Ncs_dev.ipa",
+      api_token:    ENV["FABRIC_API_TOKEN"],
+      build_secret: ENV["FABRIC_BUILD_SCERECT"],
+      emails:       ENV["BETA_EMAILS"]
+    )
+  end
+
+  ######
+
+  lane :deploy_appstore do
+    ENV["DEPLOY"] = "true" #Need to enable this propert only
+    build()
+
+    pilot(
+      #ipa:      "./build/#{ENV["APP_NAME"]}.ipa",
+      username: ENV["APPLE_USER_NAME"],
+      skip_waiting_for_build_processing: true
+    )
+    
+  end
+
+  ######
+
+end
