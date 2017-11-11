@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Crashlytics
 
 class StartAppViewController: BaseViewController {
     @IBAction func btnLogIn() {
@@ -24,8 +25,20 @@ class StartAppViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        // Do any additional setup after loading the view.
+        //--- test crash app
+//        let button = UIButton(type: .roundedRect)
+//        button.frame = CGRect(x: 20, y: 50, width: 100, height: 30)
+//        button.setTitle("Crash", for: [])
+//        button.addTarget(self, action: #selector(self.crashButtonTapped(_:)), for: .touchUpInside)
+//        view.addSubview(button)
+
     }
+    
+//    @IBAction func crashButtonTapped(_ sender: AnyObject) {
+//        Crashlytics.sharedInstance().crash()
+//    }
+
+    
     func setupView() {
         setTitle(title: "Login")
         

@@ -29,7 +29,7 @@ platform :ios do
     ENV["DEPLOY"] = "true" # Need to enable this propert only
     
     crashlytics(
-      ipa_path:     "./build/Ncs_dev.ipa",
+      ipa_path:     "./build/Learning English Vocabulary.ipa",
       api_token:    ENV["FABRIC_API_TOKEN"],
       build_secret: ENV["FABRIC_BUILD_SCERECT"],
       emails:       ENV["BETA_EMAILS"]
