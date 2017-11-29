@@ -1,0 +1,49 @@
+fastlane_version "1.91.0"
+default_platform :ios
+platform :ios do
+
+	#####################################################################
+
+	lane :sync_cert_dev do 
+		sync_cert(type: "development")
+	end 
+
+	lane :sync_cert_appstore do
+    	sync_cert(type: "appstore")
+  	end
+
+	#####################################################################
+
+	private_lane :sync_cert do |options|
+	type = options[:type]
+	    match(type: type)
+	end 
+
+
+	########
+	lane :common_setup do
+    versionNumber = get_info_plist_value(path: ENV["APP_PLIST"], key: ENV["KEY_APP_VER"])
+    buildNumber   = get_info_plist_value(path: ENV["APP_PLIST"], key: ENV["KEY_BUILD_VER"]).to_i + 1
+    set_info_plist_value(
+      path: ENV["APP_PLIST"],
+      key:  ENV["KEY_BUILD_VER"],
+      value: "#{buildNumber}"
+    )
+
+    ENV["APP_FULL_INFO"] = "#{ENV["APP_NAME"]} v#{versionNumber}(#{buildNumber})"
+
+    UI.message "Building #{ENV["APP_FULL_INFO"]} ..."
+  	end
+
+  	before_all do
+    
+      #ensure_git_status_clean
+      clear_derived_data
+      common_setup
+    
+
+  end
+
+
+
+end

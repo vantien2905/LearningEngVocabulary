@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		51E88EEB914F7B14ECBD46B7 /* Pods_LearningEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB74314B60C719C34F0375BE /* Pods_LearningEnglish.framework */; };
+		DEC9CD4D1FB6EECD0095EF8A /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC9CD4B1FB6EECD0095EF8A /* Fabric.framework */; };
+		DEC9CD4E1FB6EECD0095EF8A /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC9CD4C1FB6EECD0095EF8A /* Crashlytics.framework */; };
 		DEE914751FAF03F500FA9B63 /* LEVBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE914741FAF03F500FA9B63 /* LEVBaseCollectionViewCell.swift */; };
 		DEE914791FAF080F00FA9B63 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE914781FAF080F00FA9B63 /* UIViewX.swift */; };
 		FD1B0F4E1FAEABC400B9321D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B0F4C1FAEABC400B9321D /* LogInViewController.swift */; };
@@ -34,6 +36,9 @@
 /* Begin PBXFileReference section */
 		AB74314B60C719C34F0375BE /* Pods_LearningEnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearningEnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C2282A506E4C5F71A94DF3 /* Pods-LearningEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningEnglish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish.debug.xcconfig"; sourceTree = "<group>"; };
+		BC724E86A9F9BC8A97BA0F13 /* Pods-LearningEnglish.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningEnglish.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish.appstore.xcconfig"; sourceTree = "<group>"; };
+		DEC9CD4B1FB6EECD0095EF8A /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		DEC9CD4C1FB6EECD0095EF8A /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		DEE914741FAF03F500FA9B63 /* LEVBaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEVBaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		DEE914781FAF080F00FA9B63 /* UIViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		F76C6920FA06C5880C044AFC /* Pods-LearningEnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningEnglish.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,7 +51,7 @@
 		FD1B0F5C1FAEBA4F00B9321D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		FD1B0F5E1FAECE3300B9321D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FD1B0F5F1FAECE3300B9321D /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
-		FDCC28851FA075B2009728F1 /* LearningEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCC28851FA075B2009728F1 /* Learning English Vocabulary Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learning English Vocabulary Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCC28881FA075B2009728F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDCC288A1FA075B2009728F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FDCC288D1FA075B2009728F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +71,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				51E88EEB914F7B14ECBD46B7 /* Pods_LearningEnglish.framework in Frameworks */,
+				DEC9CD4E1FB6EECD0095EF8A /* Crashlytics.framework in Frameworks */,
+				DEC9CD4D1FB6EECD0095EF8A /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,8 +82,11 @@
 		5896FC1E26230FA78DF1F487 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				DEC9CD4C1FB6EECD0095EF8A /* Crashlytics.framework */,
+				DEC9CD4B1FB6EECD0095EF8A /* Fabric.framework */,
 				B7C2282A506E4C5F71A94DF3 /* Pods-LearningEnglish.debug.xcconfig */,
 				F76C6920FA06C5880C044AFC /* Pods-LearningEnglish.release.xcconfig */,
+				BC724E86A9F9BC8A97BA0F13 /* Pods-LearningEnglish.appstore.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -135,7 +145,7 @@
 		FDCC28861FA075B2009728F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FDCC28851FA075B2009728F1 /* LearningEnglish.app */,
+				FDCC28851FA075B2009728F1 /* Learning English Vocabulary Dev.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -302,6 +312,7 @@
 				4F308E821007528EBB139150 /* [CP] Embed Pods Frameworks */,
 				7D1E0E12DCC2A5A25E63E082 /* [CP] Copy Pods Resources */,
 				DEE914761FAF044700FA9B63 /* ShellScript */,
+				DEC9CD4A1FB6EE740095EF8A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -309,7 +320,7 @@
 			);
 			name = LearningEnglish;
 			productName = LearningEnglish;
-			productReference = FDCC28851FA075B2009728F1 /* LearningEnglish.app */;
+			productReference = FDCC28851FA075B2009728F1 /* Learning English Vocabulary Dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -324,7 +335,7 @@
 				TargetAttributes = {
 					FDCC28841FA075B2009728F1 = {
 						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -397,6 +408,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		DEC9CD4A1FB6EE740095EF8A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run aed16a54a9d939707e0755e6e727909e8c4950ee 54fb1cc9d30afad5f97d8579c7d15bced41c9049c6132c0121d041020b74b5d1";
 		};
 		DEE914761FAF044700FA9B63 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -476,6 +500,79 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DEC9CD481FB6E1E40095EF8A /* Appstore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Appstore;
+		};
+		DEC9CD491FB6E1E40095EF8A /* Appstore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC724E86A9F9BC8A97BA0F13 /* Pods-LearningEnglish.appstore.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KGRXCGAUA5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = LearningEnglish/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kai.com.learningenglish;
+				PRODUCT_NAME = "Learning English Vocabulary";
+				PROVISIONING_PROFILE = "f8944ce4-a389-4cd8-bd2c-b420774d6ef0";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore kai.com.learningenglish";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Appstore;
+		};
 		FDCC28951FA075B2009728F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -588,11 +685,18 @@
 			baseConfigurationReference = B7C2282A506E4C5F71A94DF3 /* Pods-LearningEnglish.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KGRXCGAUA5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LearningEnglish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vinova.LearningEnglish;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = kai.com.learningenglish;
+				PRODUCT_NAME = "Learning English Vocabulary Dev";
+				PROVISIONING_PROFILE = "837b5644-189c-4e0c-9ecc-a52476c54d26";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development kai.com.learningenglish";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -603,11 +707,19 @@
 			baseConfigurationReference = F76C6920FA06C5880C044AFC /* Pods-LearningEnglish.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = KGRXCGAUA5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LearningEnglish/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vinova.LearningEnglish;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = kai.com.learningenglish;
+				PRODUCT_NAME = "Learning English Vocabulary Dev";
+				PROVISIONING_PROFILE = "837b5644-189c-4e0c-9ecc-a52476c54d26";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development kai.com.learningenglish";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -621,6 +733,7 @@
 			buildConfigurations = (
 				FDCC28951FA075B2009728F1 /* Debug */,
 				FDCC28961FA075B2009728F1 /* Release */,
+				DEC9CD481FB6E1E40095EF8A /* Appstore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -630,6 +743,7 @@
 			buildConfigurations = (
 				FDCC28981FA075B2009728F1 /* Debug */,
 				FDCC28991FA075B2009728F1 /* Release */,
+				DEC9CD491FB6E1E40095EF8A /* Appstore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
