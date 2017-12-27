@@ -92,6 +92,7 @@ class BaseViewController: UIViewController {
         
         self.navigationItem.titleView = lb
     }
+
 //
 //    func addDrawerButton() {
 //        self.addButtonToNavigation(image: NCSImage.imgDrawer, style: .left, action: #selector(btnDrawerTapped))
