@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookViewController: BaseViewController {
+class BookViewController: KBaseViewController {
 
     @IBOutlet weak var tbBook: UITableView!
     let cellId = "BookTableViewCell"
@@ -18,13 +18,14 @@ class BookViewController: BaseViewController {
         configureTable()
     }
     
-    override func setUpView() {
+    
+    override func setUpNavigation(navigationColor: UIColor, backgroundColor: UIColor) {
+        super.setUpNavigation()
         setTitle(title: "600 Essential English Words")
     }
     
     func configureTable() {
-        let nib = UINib(nibName: "BookTableViewCell", bundle: nil)
-        tbBook.register(nib, forCellReuseIdentifier: cellId)
+        tbBook.registerCustomCell(BookTableViewCell.self, fromNib: true)
         tbBook.delegate = self
         tbBook.dataSource = self
     }
@@ -32,7 +33,7 @@ class BookViewController: BaseViewController {
 
 extension BookViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tbBook.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        let cell = tbBook.dequeueCustomCell(BookTableViewCell.self, indexPath: indexPath)
         
         return cell
     }
@@ -46,7 +47,7 @@ extension BookViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UnitViewController.initControllerFromNib()
+        let vc = UnitViewController.initFromNib()
         self.push(controller: vc)
     }
 }

@@ -1,35 +1,46 @@
 //
-//  UIViewController+Extension.swift
-//  LearningEnglish
+//  UIViewController+extension.swift
+//  CodeBaseNetWork
 //
-//  Created by Tien Dinh on 11/5/17.
-//  Copyright © 2017 Tien Dinh. All rights reserved.
+//  Created by Kai Pham on 12/28/17.
+//  Copyright © 2017 Kai Pham. All rights reserved.
 //
 
 import UIKit
-public extension UIViewController {
-   
-    class func initControllerFromNib() -> UIViewController {
-        let isNib: Bool = Bundle.main.path(forResource: self.className, ofType: "nib") != nil
-        guard isNib else {
-            assert(!isNib, "invalid nib file")
-            return UIViewController()
+
+extension UIViewController {
+    static func initFromNib() -> Self {
+        func instantiateFromNib<T: UIViewController>(_ : T.Type) -> T {
+            return T(nibName: String(describing: T.self), bundle: nil)
         }
-        return self.init(nibName: self.className, bundle: nil)
+
+        return instantiateFromNib(self)
+    }
+    
+    func showHUD() {
+        
+    }
+    
+    func hideHUD() {
+        
     }
 }
+
 
 extension UIViewController {
     func push(controller: UIViewController, animated: Bool = true) {
         self.navigationController?.pushViewController(controller, animated: animated)
     }
     
-    func present(controller: UIViewController, animated: Bool = true) {
-        self.present(controller, animated: animated, completion: nil)
-    }
-    
     func pop(animated: Bool = true ) {
         self.navigationController?.popViewController(animated: animated)
     }
     
+    func present(controller: UIViewController, animated: Bool = true) {
+        self.present(controller, animated: animated, completion: nil)
+    }
+    
+    func dismiss(animated: Bool = true) {
+        self.dismiss(animated: animated, completion: nil)
+    }
 }

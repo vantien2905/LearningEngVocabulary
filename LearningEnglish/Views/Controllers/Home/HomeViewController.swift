@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+class HomeViewController: KBaseViewController {
     @IBOutlet weak var cltBook: UICollectionView!
 
     let cellId = "cltBookCell"
@@ -18,9 +18,11 @@ class HomeViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func setUpView() {
+    override func setUpViews() {
         setTitle(title: "4000 essential english words")
     }
+    
+    
     
     func configureCollection() {
         
@@ -59,7 +61,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = BookViewController.initControllerFromNib()
+        let vc = BookViewController.initFromNib()
         self.push(controller: vc)
     }
 }

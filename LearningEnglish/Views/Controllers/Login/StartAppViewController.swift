@@ -11,20 +11,20 @@ import RxSwift
 import RxCocoa
 import Crashlytics
 
-class StartAppViewController: BaseViewController {
+class StartAppViewController: KBaseViewController {
     @IBAction func btnLogIn() {
-        let vc = LogInViewController.initControllerFromNib()
+        let vc = LogInViewController.initFromNib()
         self.push(controller: vc)
         
     }
     
     @IBAction func btnSignUp() {
-        let vc = SignUpViewController.initControllerFromNib()
+        let vc = SignUpViewController.initFromNib()
         self.push(controller: vc)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
+        
         //--- test crash app
 //        let button = UIButton(type: .roundedRect)
 //        button.frame = CGRect(x: 20, y: 50, width: 100, height: 30)
@@ -39,12 +39,7 @@ class StartAppViewController: BaseViewController {
 //    }
 
     
-    func setupView() {
-        setTitle(title: "Login")
-        
-        print("Test")
-        
-    }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
     }

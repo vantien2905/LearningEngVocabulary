@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UnitViewController: BaseViewController {
+class UnitViewController: KBaseViewController {
     @IBOutlet weak var btnGame: UIButton!
     @IBOutlet weak var btnPractice: UIButton!
     @IBOutlet weak var btnTranslate: UIButton!
@@ -23,7 +23,7 @@ class UnitViewController: BaseViewController {
         configureTable()
     }
     
-    override func setUpView() {
+    override func setUpViews() {
         setTitle(title: "Unit1: Contacts")
         btnGame.layer.cornerRadius = 5
         btnPractice.layer.cornerRadius = 5

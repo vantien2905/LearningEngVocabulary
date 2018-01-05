@@ -8,12 +8,12 @@
 
 import UIKit
 
-class LogInViewController: BaseViewController {
+class LogInViewController: KBaseViewController {
     @IBOutlet weak var tfUserName: LEVTextField!
     @IBOutlet weak var tfPassWord: LEVTextField!
     @IBOutlet weak var btEnter: UIButton!
     @IBAction func btnEnter() {
-        let vc = HomeViewController.initControllerFromNib()
+        let vc = HomeViewController.initFromNib()
         self.push(controller: vc)
     }
 
@@ -26,7 +26,7 @@ class LogInViewController: BaseViewController {
 //        self.navigationController?.isNavigationBarHidden = false
 //    }
     
-    override func setUpView() {
+    override func setUpViews() {
         tfUserName.setTitleTextField(text: "UserName")
         tfPassWord.setTitleTextField(text: "Password")
         tfPassWord.backgroundColor = LEVColor.whiteColor

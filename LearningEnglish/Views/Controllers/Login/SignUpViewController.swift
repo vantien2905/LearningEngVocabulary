@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpViewController: BaseViewController {
+class SignUpViewController: KBaseViewController {
     @IBOutlet weak var tfEmail: LEVTextField!
     @IBOutlet weak var tfPassword: LEVTextField!
     @IBOutlet weak var tfRetypePassword: LEVTextField!
@@ -16,10 +16,9 @@ class SignUpViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
-    override func setUpView() {
+    override func setUpViews() {
         tfEmail.setTitleTextField(text: "Email")
         tfPassword.setTitleTextField(text: "Password")
         tfRetypePassword.setTitleTextField(text: "Retype Password")

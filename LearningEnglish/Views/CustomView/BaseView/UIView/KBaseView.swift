@@ -1,14 +1,14 @@
 //
-//  LEVBaseView.swift
-//  LearningEnglish
+//  KBaseView.swift
+//  CodeBaseNetWork
 //
-//  Created by Tien Dinh on 11/5/17.
-//  Copyright © 2017 Tien Dinh. All rights reserved.
+//  Created by Kai Pham on 12/28/17.
+//  Copyright © 2017 Kai Pham. All rights reserved.
 //
 
 import UIKit
 
-class LEVBaseView: UIView {
+class KBaseView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpViews()
