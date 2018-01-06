@@ -23,11 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window!.makeKeyAndVisible()
         goToStartApp()
         
+        //---
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UIApplication.shared.statusBarStyle = .lightContent
         return true
     }
     func goToStartApp() {
-        let vc  = UINavigationController(rootViewController: StartAppViewController())
-        window?.rootViewController = vc
+//        let vc  = UINavigationController(rootViewController: WordBookViewController.initFromNib())
+        window?.show(rootViewController: TabbarMainViewController())
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

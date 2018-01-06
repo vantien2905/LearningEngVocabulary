@@ -6,10 +6,13 @@ target 'LearningEnglish' do
   use_frameworks!
 
   # Pods for LearningEnglish
-pod 'RxSwift',    '~> 4.0'
-pod 'RxCocoa',    '~> 4.0'
-pod 'Action'
-pod 'ObjectMapper'
-pod 'SwiftyJSON'
+    pod 'RxSwift',    '~> 4.0'
+    pod 'RxCocoa',    '~> 4.0'
+    pod 'Action'
+    pod 'ObjectMapper'
+    pod 'SwiftyJSON'
+
+    # other
+    pod 'SDWebImage'
 
 end

@@ -18,8 +18,7 @@ class BookViewController: KBaseViewController {
         configureTable()
     }
     
-    
-    override func setUpNavigation(navigationColor: UIColor, backgroundColor: UIColor) {
+    override func setUpNavigation() {
         super.setUpNavigation()
         setTitle(title: "600 Essential English Words")
     }

@@ -18,7 +18,6 @@ enum StyleNavigation {
 
 class KBaseViewController: UIViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigation()
@@ -29,13 +28,39 @@ class KBaseViewController: UIViewController {
         
     }
     
-    
-    func setUpNavigation(navigationColor: UIColor = LEVColor.naviBarColor, backgroundColor: UIColor = LEVColor.whiteColor) {
+    func setUpNavigation() {
         //---
-        self.navigationController?.navigationBar.barTintColor = navigationColor
+        self.navigationController?.navigationBar.barTintColor = LEVColor.naviBarColor
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.isHidden = false
-        self.view.backgroundColor = backgroundColor
+        self.view.backgroundColor = LEVColor.background
+        setGradientNavigation()
+    }
+    
+    private func setGradientNavigation() {
+        let gradient = CAGradientLayer()
+        let sizeLength = UIScreen.main.bounds.size.height * 2
+        let defaultNavigationBarFrame = CGRect(x: 0, y: 0, width: sizeLength, height: 64)
+        
+        gradient.frame = defaultNavigationBarFrame
+        
+        gradient.colors = [LEVColor.buttonGreen.cgColor, LEVColor.titleGreen.cgColor]
+        gradient.startPoint = CGPoint(x: 0, y: 1)
+        gradient.endPoint = CGPoint(x: 0.3, y: 0.9)
+        
+        UINavigationBar.appearance().setBackgroundImage(self.image(fromLayer: gradient), for: .default)
+    }
+    
+    private func image(fromLayer layer: CALayer) -> UIImage {
+        UIGraphicsBeginImageContext(layer.bounds.size)
+        
+        layer.render(in: UIGraphicsGetCurrentContext()!)
+        
+        let outputImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        return outputImage!
     }
     
     // No use Cocoa Action
@@ -99,7 +124,7 @@ class KBaseViewController: UIViewController {
         }
     }
     
-    func setTitle(title: String, textColor: UIColor = UIColor.black, font: UIFont = LEVFont.fontBold17) {
+    func setTitle(title: String, textColor: UIColor = UIColor.white, font: UIFont = LEVFont.fontBold17) {
         let lb = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44))
         lb.font = font
         lb.text = title

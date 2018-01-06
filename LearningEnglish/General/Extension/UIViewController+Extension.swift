@@ -26,7 +26,6 @@ extension UIViewController {
     }
 }
 
-
 extension UIViewController {
     func push(controller: UIViewController, animated: Bool = true) {
         self.navigationController?.pushViewController(controller, animated: animated)

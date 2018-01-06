@@ -13,7 +13,6 @@ class UnitViewController: KBaseViewController {
     @IBOutlet weak var btnPractice: UIButton!
     @IBOutlet weak var btnTranslate: UIButton!
     
-    
     @IBOutlet weak var tbUnit: UITableView!
 
     let cellId = "UnitTableViewCell"

@@ -37,8 +37,6 @@ class StartAppViewController: KBaseViewController {
 //    @IBAction func crashButtonTapped(_ sender: AnyObject) {
 //        Crashlytics.sharedInstance().crash()
 //    }
-
-    
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true

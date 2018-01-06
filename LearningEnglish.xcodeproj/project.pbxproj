@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		51E88EEB914F7B14ECBD46B7 /* Pods_LearningEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB74314B60C719C34F0375BE /* Pods_LearningEnglish.framework */; };
+		DE527E4C20008A1F00D598DF /* WordBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE527E4B20008A1F00D598DF /* WordBook.swift */; };
+		DE527E4E20008A9500D598DF /* APIWordBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE527E4D20008A9500D598DF /* APIWordBook.swift */; };
+		DE527E5220008DD500D598DF /* WordBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE527E5020008DD500D598DF /* WordBookViewController.swift */; };
+		DE527E5320008DD500D598DF /* WordBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE527E5120008DD500D598DF /* WordBookViewController.xib */; };
+		DE527E5920008EEF00D598DF /* WordBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE527E5820008EEF00D598DF /* WordBookViewModel.swift */; };
+		DE527E5E2000919400D598DF /* WorkBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE527E5C2000919400D598DF /* WorkBookCell.swift */; };
+		DE527E5F2000919400D598DF /* WorkBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE527E5D2000919400D598DF /* WorkBookCell.xib */; };
+		DE527E622000B20E00D598DF /* TabbarMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE527E612000B20E00D598DF /* TabbarMainViewController.swift */; };
+		DE527E662000B2E000D598DF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE527E642000B2E000D598DF /* SettingsViewController.swift */; };
+		DE527E672000B2E000D598DF /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE527E652000B2E000D598DF /* SettingsViewController.xib */; };
+		DE527E6B2000B33200D598DF /* UserManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE527E692000B33200D598DF /* UserManagerViewController.swift */; };
+		DE527E6C2000B33200D598DF /* UserManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE527E6A2000B33200D598DF /* UserManagerViewController.xib */; };
 		DE5BA1FE1FFFC6E80002E12B /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5BA1ED1FFFC6E80002E12B /* ApiError.swift */; };
 		DE5BA1FF1FFFC6E80002E12B /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5BA1EE1FFFC6E80002E12B /* ParameterEncoding.swift */; };
 		DE5BA2001FFFC6E80002E12B /* HTTPBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5BA1EF1FFFC6E80002E12B /* HTTPBody.swift */; };
@@ -19,8 +31,6 @@
 		DE5BA2061FFFC6E80002E12B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5BA1F61FFFC6E80002E12B /* API.swift */; };
 		DE5BA2071FFFC6E80002E12B /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5BA1F71FFFC6E80002E12B /* APIProvider.swift */; };
 		DE5BA2081FFFC6E80002E12B /* Data+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5BA1F91FFFC6E80002E12B /* Data+extension.swift */; };
-		DE5BA2091FFFC6E80002E12B /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5BA1FC1FFFC6E80002E12B /* TestModel.swift */; };
-		DE5BA20A1FFFC6E80002E12B /* TestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5BA1FD1FFFC6E80002E12B /* TestAPI.swift */; };
 		DE5BA2171FFFC75E0002E12B /* UISlider+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5BA20B1FFFC75D0002E12B /* UISlider+extension.swift */; };
 		DE5BA2181FFFC75E0002E12B /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5BA20C1FFFC75D0002E12B /* UIColor+extension.swift */; };
 		DE5BA2191FFFC75E0002E12B /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5BA20D1FFFC75D0002E12B /* String+extension.swift */; };
@@ -82,6 +92,18 @@
 		AB74314B60C719C34F0375BE /* Pods_LearningEnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearningEnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C2282A506E4C5F71A94DF3 /* Pods-LearningEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningEnglish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish.debug.xcconfig"; sourceTree = "<group>"; };
 		BC724E86A9F9BC8A97BA0F13 /* Pods-LearningEnglish.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningEnglish.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish.appstore.xcconfig"; sourceTree = "<group>"; };
+		DE527E4B20008A1F00D598DF /* WordBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordBook.swift; sourceTree = "<group>"; };
+		DE527E4D20008A9500D598DF /* APIWordBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWordBook.swift; sourceTree = "<group>"; };
+		DE527E5020008DD500D598DF /* WordBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordBookViewController.swift; sourceTree = "<group>"; };
+		DE527E5120008DD500D598DF /* WordBookViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordBookViewController.xib; sourceTree = "<group>"; };
+		DE527E5820008EEF00D598DF /* WordBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordBookViewModel.swift; sourceTree = "<group>"; };
+		DE527E5C2000919400D598DF /* WorkBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkBookCell.swift; sourceTree = "<group>"; };
+		DE527E5D2000919400D598DF /* WorkBookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkBookCell.xib; sourceTree = "<group>"; };
+		DE527E612000B20E00D598DF /* TabbarMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarMainViewController.swift; sourceTree = "<group>"; };
+		DE527E642000B2E000D598DF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DE527E652000B2E000D598DF /* SettingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		DE527E692000B33200D598DF /* UserManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManagerViewController.swift; sourceTree = "<group>"; };
+		DE527E6A2000B33200D598DF /* UserManagerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserManagerViewController.xib; sourceTree = "<group>"; };
 		DE5BA1ED1FFFC6E80002E12B /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		DE5BA1EE1FFFC6E80002E12B /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		DE5BA1EF1FFFC6E80002E12B /* HTTPBody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPBody.swift; sourceTree = "<group>"; };
@@ -93,8 +115,6 @@
 		DE5BA1F61FFFC6E80002E12B /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DE5BA1F71FFFC6E80002E12B /* APIProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		DE5BA1F91FFFC6E80002E12B /* Data+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+extension.swift"; sourceTree = "<group>"; };
-		DE5BA1FC1FFFC6E80002E12B /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
-		DE5BA1FD1FFFC6E80002E12B /* TestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestAPI.swift; sourceTree = "<group>"; };
 		DE5BA20B1FFFC75D0002E12B /* UISlider+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISlider+extension.swift"; sourceTree = "<group>"; };
 		DE5BA20C1FFFC75D0002E12B /* UIColor+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		DE5BA20D1FFFC75D0002E12B /* String+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
@@ -181,9 +201,87 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DE527E49200089DE00D598DF /* Wordbook */ = {
+			isa = PBXGroup;
+			children = (
+				DE527E4D20008A9500D598DF /* APIWordBook.swift */,
+			);
+			path = Wordbook;
+			sourceTree = "<group>";
+		};
+		DE527E4A20008A0500D598DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE527E4B20008A1F00D598DF /* WordBook.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE527E4F20008DBA00D598DF /* WordBook */ = {
+			isa = PBXGroup;
+			children = (
+				DE527E5A2000910100D598DF /* Cell */,
+				DE527E5020008DD500D598DF /* WordBookViewController.swift */,
+				DE527E5120008DD500D598DF /* WordBookViewController.xib */,
+			);
+			path = WordBook;
+			sourceTree = "<group>";
+		};
+		DE527E5620008ED100D598DF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DE527E5720008ED100D598DF /* WordBook */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DE527E5720008ED100D598DF /* WordBook */ = {
+			isa = PBXGroup;
+			children = (
+				DE527E5820008EEF00D598DF /* WordBookViewModel.swift */,
+			);
+			path = WordBook;
+			sourceTree = "<group>";
+		};
+		DE527E5A2000910100D598DF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DE527E5C2000919400D598DF /* WorkBookCell.swift */,
+				DE527E5D2000919400D598DF /* WorkBookCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DE527E602000B20000D598DF /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				DE527E612000B20E00D598DF /* TabbarMainViewController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		DE527E632000B29F00D598DF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DE527E642000B2E000D598DF /* SettingsViewController.swift */,
+				DE527E652000B2E000D598DF /* SettingsViewController.xib */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		DE527E682000B31000D598DF /* UserManager */ = {
+			isa = PBXGroup;
+			children = (
+				DE527E692000B33200D598DF /* UserManagerViewController.swift */,
+				DE527E6A2000B33200D598DF /* UserManagerViewController.xib */,
+			);
+			path = UserManager;
+			sourceTree = "<group>";
+		};
 		DE5BA1EA1FFFC6E80002E12B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DE527E4A20008A0500D598DF /* Model */,
 				DE5BA1EB1FFFC6E80002E12B /* Misc */,
 				DE5BA1FA1FFFC6E80002E12B /* Request */,
 			);
@@ -235,18 +333,9 @@
 		DE5BA1FA1FFFC6E80002E12B /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				DE5BA1FB1FFFC6E80002E12B /* Test */,
+				DE527E49200089DE00D598DF /* Wordbook */,
 			);
 			path = Request;
-			sourceTree = "<group>";
-		};
-		DE5BA1FB1FFFC6E80002E12B /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				DE5BA1FC1FFFC6E80002E12B /* TestModel.swift */,
-				DE5BA1FD1FFFC6E80002E12B /* TestAPI.swift */,
-			);
-			path = Test;
 			sourceTree = "<group>";
 		};
 		DE5BA2231FFFC8490002E12B /* Controller */ = {
@@ -414,10 +503,10 @@
 		FDCC28871FA075B2009728F1 /* LearningEnglish */ = {
 			isa = PBXGroup;
 			children = (
+				DE527E5620008ED100D598DF /* ViewModels */,
 				DE5BA1EA1FFFC6E80002E12B /* Network */,
 				FDCC289F1FA07680009728F1 /* Views */,
 				FDCC289E1FA07670009728F1 /* Locales */,
-				FDCC289D1FA07663009728F1 /* ViewModels */,
 				FDCC289C1FA07651009728F1 /* General */,
 				FDCC289B1FA0763E009728F1 /* Libraries */,
 				FDCC289A1FA075FA009728F1 /* SupportFile */,
@@ -453,13 +542,6 @@
 				FDCC28A11FA076C9009728F1 /* Helper */,
 			);
 			path = General;
-			sourceTree = "<group>";
-		};
-		FDCC289D1FA07663009728F1 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		FDCC289E1FA07670009728F1 /* Locales */ = {
@@ -540,6 +622,10 @@
 		FDCC28A61FA07733009728F1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DE527E682000B31000D598DF /* UserManager */,
+				DE527E632000B29F00D598DF /* Settings */,
+				DE527E602000B20000D598DF /* Tabbar */,
+				DE527E4F20008DBA00D598DF /* WordBook */,
 				FD79B1141FD394C700D533FC /* Unit */,
 				FD79B10A1FD38E3600D533FC /* Book */,
 				FD64409C1FCE99B800D8C782 /* Home */,
@@ -625,17 +711,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE527E5F2000919400D598DF /* WorkBookCell.xib in Resources */,
 				FDCC28931FA075B2009728F1 /* LaunchScreen.storyboard in Resources */,
 				FD79B11D1FD3985400D533FC /* UnitTableViewCell.xib in Resources */,
 				FDCC28AB1FA07A5B009728F1 /* StartAppViewController.xib in Resources */,
 				FDCC28901FA075B2009728F1 /* Assets.xcassets in Resources */,
 				FD6440A51FCE9B2000D8C782 /* HomeCollectionViewCell.xib in Resources */,
 				FD79B1131FD38EA900D533FC /* BookTableViewCell.xib in Resources */,
+				DE527E6C2000B33200D598DF /* UserManagerViewController.xib in Resources */,
 				FD79B1181FD394F700D533FC /* UnitViewController.xib in Resources */,
 				FDCC288E1FA075B2009728F1 /* Main.storyboard in Resources */,
 				FD79B10E1FD38E5000D533FC /* BookViewController.xib in Resources */,
 				FD1B0F611FAECE3300B9321D /* SignUpViewController.xib in Resources */,
+				DE527E672000B2E000D598DF /* SettingsViewController.xib in Resources */,
 				FD79B1211FD3A4FF00D533FC /* UnitPracticeTableViewCell.xib in Resources */,
+				DE527E5320008DD500D598DF /* WordBookViewController.xib in Resources */,
 				FD6440A01FCE99E400D8C782 /* HomeViewController.xib in Resources */,
 				FD1B0F4F1FAEABC400B9321D /* LogInViewController.xib in Resources */,
 			);
@@ -655,6 +745,7 @@
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -663,6 +754,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -740,11 +832,13 @@
 				DE5BA21D1FFFC75E0002E12B /* UITable+extension.swift in Sources */,
 				FD1B0F511FAEAE5A00B9321D /* UIViewController+Extension.swift in Sources */,
 				FD79B1171FD394F700D533FC /* UnitViewController.swift in Sources */,
+				DE527E6B2000B33200D598DF /* UserManagerViewController.swift in Sources */,
 				DE5BA2371FFFC84A0002E12B /* KBaseTableCellXib.swift in Sources */,
 				DE5BA2381FFFC84A0002E12B /* KPageViewController.swift in Sources */,
 				DE5BA2181FFFC75E0002E12B /* UIColor+extension.swift in Sources */,
 				FDCC288B1FA075B2009728F1 /* ViewController.swift in Sources */,
 				FD79B1201FD3A4FF00D533FC /* UnitPracticeTableViewCell.swift in Sources */,
+				DE527E4E20008A9500D598DF /* APIWordBook.swift in Sources */,
 				DE5BA1FE1FFFC6E80002E12B /* ApiError.swift in Sources */,
 				DE5BA2021FFFC6E80002E12B /* APIKeyParam.swift in Sources */,
 				DE5BA2191FFFC75E0002E12B /* String+extension.swift in Sources */,
@@ -753,21 +847,25 @@
 				DE5BA2011FFFC6E80002E12B /* HTTPMethod.swift in Sources */,
 				DE5BA2391FFFC84A0002E12B /* KPageMenuView.swift in Sources */,
 				FD79B11C1FD3985400D533FC /* UnitTableViewCell.swift in Sources */,
-				DE5BA20A1FFFC6E80002E12B /* TestAPI.swift in Sources */,
 				FDCC28B21FA08EFE009728F1 /* Enum.swift in Sources */,
+				DE527E5220008DD500D598DF /* WordBookViewController.swift in Sources */,
 				DE5BA2341FFFC84A0002E12B /* KBaseCollectionCellXib.swift in Sources */,
 				DE5BA21C1FFFC75E0002E12B /* UIScreen+extension.swift in Sources */,
-				DE5BA2091FFFC6E80002E12B /* TestModel.swift in Sources */,
 				FD79B1121FD38EA900D533FC /* BookTableViewCell.swift in Sources */,
+				DE527E662000B2E000D598DF /* SettingsViewController.swift in Sources */,
 				DEE914791FAF080F00FA9B63 /* UIViewX.swift in Sources */,
+				DE527E5920008EEF00D598DF /* WordBookViewModel.swift in Sources */,
 				FD1B0F4E1FAEABC400B9321D /* LogInViewController.swift in Sources */,
 				DE5BA2071FFFC6E80002E12B /* APIProvider.swift in Sources */,
+				DE527E5E2000919400D598DF /* WorkBookCell.swift in Sources */,
+				DE527E4C20008A1F00D598DF /* WordBook.swift in Sources */,
 				DE5BA21E1FFFC75E0002E12B /* UIApplication+extension.swift in Sources */,
 				DE5BA2201FFFC75E0002E12B /* UIWindow+extension.swift in Sources */,
 				FD6440A41FCE9B2000D8C782 /* HomeCollectionViewCell.swift in Sources */,
 				DE5BA2351FFFC84A0002E12B /* KBaseCollectionCell.swift in Sources */,
 				DE5BA21A1FFFC75E0002E12B /* UIButton+extension.swift in Sources */,
 				DEE914751FAF03F500FA9B63 /* LEVBaseCollectionViewCell.swift in Sources */,
+				DE527E622000B20E00D598DF /* TabbarMainViewController.swift in Sources */,
 				DE5BA2171FFFC75E0002E12B /* UISlider+extension.swift in Sources */,
 				DE5BA2051FFFC6E80002E12B /* URLRequest+extension.swift in Sources */,
 				FD64409F1FCE99E400D8C782 /* HomeViewController.swift in Sources */,

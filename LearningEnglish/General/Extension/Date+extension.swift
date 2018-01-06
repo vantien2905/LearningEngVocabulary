@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 extension Date {
     func dateToString(format: KDateFormat) -> String {
         let dateFormatter = DateFormatter()
@@ -89,7 +88,6 @@ extension Date {
         return "Just Now"
     }
 }
-
 
 // MARK: date format
 enum KDateFormat: String {

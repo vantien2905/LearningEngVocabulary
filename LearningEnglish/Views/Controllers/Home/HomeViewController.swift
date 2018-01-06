@@ -22,8 +22,6 @@ class HomeViewController: KBaseViewController {
         setTitle(title: "4000 essential english words")
     }
     
-    
-    
     func configureCollection() {
         
         cltBook.register(UINib(nibName: "HomeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellId)

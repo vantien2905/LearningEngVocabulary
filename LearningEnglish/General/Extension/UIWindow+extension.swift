@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIWindow {
-    func show(rootViewController: UIViewController, animated: Bool = true , animationType: String = kCATransitionFromTop) {
+    func show(rootViewController: UIViewController, animated: Bool = true, animationType: String = kCATransitionFromTop) {
         if animated {
             let animation = CATransition()
             animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)

@@ -8,8 +8,3 @@
 
 import UIKit
 
-//enum StyleNavigation {
-//    case left
-//    case right
-//}
-

@@ -80,6 +80,5 @@ extension UICollectionView {
         
         return headerFooter as! T
     }
-   
     
 }
