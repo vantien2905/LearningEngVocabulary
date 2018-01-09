@@ -13,7 +13,7 @@ class LogInViewController: KBaseViewController {
     @IBOutlet weak var tfPassWord: LEVTextField!
     @IBOutlet weak var btEnter: UIButton!
     @IBAction func btnEnter() {
-        let vc = HomeViewController.initFromNib()
+        let vc = WordBookViewController.initFromNib()
         self.push(controller: vc)
     }
 
