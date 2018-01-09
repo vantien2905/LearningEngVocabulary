@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BookViewController: KBaseViewController {
+class ListUnitViewController: KBaseViewController {
 
     @IBOutlet weak var tbBook: UITableView!
     let cellId = "BookTableViewCell"
@@ -30,7 +30,7 @@ class BookViewController: KBaseViewController {
     }
 }
 
-extension BookViewController: UITableViewDelegate, UITableViewDataSource {
+extension ListUnitViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tbBook.dequeueCustomCell(BookTableViewCell.self, indexPath: indexPath)
         
@@ -46,7 +46,7 @@ extension BookViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UnitViewController.initFromNib()
+        let vc = UnitDetailViewController.initFromNib()
         self.push(controller: vc)
     }
 }

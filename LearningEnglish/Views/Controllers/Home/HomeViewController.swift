@@ -59,7 +59,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = BookViewController.initFromNib()
+        let vc = ListUnitViewController.initFromNib()
         self.push(controller: vc)
     }
 }

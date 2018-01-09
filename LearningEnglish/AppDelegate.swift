@@ -30,8 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func goToStartApp() {
-//        let vc  = UINavigationController(rootViewController: WordBookViewController.initFromNib())
-        window?.show(rootViewController: TabbarMainViewController())
+        let vc  = UINavigationController(rootViewController: UnitDetailViewController())
+        window?.show(rootViewController: vc )
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

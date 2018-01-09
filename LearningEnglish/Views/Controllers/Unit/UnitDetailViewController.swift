@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UnitViewController: KBaseViewController {
+class UnitDetailViewController: KBaseViewController {
     @IBOutlet weak var btnGame: UIButton!
     @IBOutlet weak var btnPractice: UIButton!
     @IBOutlet weak var btnTranslate: UIButton!
@@ -42,7 +42,7 @@ class UnitViewController: KBaseViewController {
 
 }
 
-extension UnitViewController: UITableViewDataSource, UITableViewDelegate {
+extension UnitDetailViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.item == 9 {
             let cell = tbUnit.dequeueReusableCell(withIdentifier: cellPracticeId, for: indexPath)
