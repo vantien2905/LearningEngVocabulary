@@ -25,7 +25,7 @@ extension APIWordbook: TargetType {
         return .get
     }
     
-    var parameters: [String : Any]? {
+    var parameters: [String: Any]? {
         return nil
     }
     
@@ -33,7 +33,7 @@ extension APIWordbook: TargetType {
         return nil
     }
     
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         return nil
     }
     

@@ -20,7 +20,6 @@ struct LEVColor {
     static let buttonGreen = UIColor.hexStringToUIColor(hex: "39b54a")
     static let titleGreen = UIColor.hexStringToUIColor(hex: "1d9571")
     
-    
 //    struct  ColorGlobal {
 //        static let titleGreen = UIColor(hex: "1d9571")
 //        static let buttonGreen =  UIColor(hex: "39b54a")

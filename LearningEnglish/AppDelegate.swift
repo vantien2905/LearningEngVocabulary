@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func goToStartApp() {
         let vc  = UINavigationController(rootViewController: TabbarMainViewController())
         window?.show(rootViewController: vc )
+
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
