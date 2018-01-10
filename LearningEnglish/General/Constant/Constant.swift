@@ -64,4 +64,5 @@ struct LEVImage {
     static let imgSettingActive = UIImage(named: "settings_active")!.withRenderingMode(.alwaysOriginal)
     static let imgUserTabbar = UIImage(named: "profile")!.withRenderingMode(.alwaysOriginal)
     static let imgUserTabbarActive = UIImage(named: "profile_active")!.withRenderingMode(.alwaysOriginal)
+    static let imgUnitDefault = UIImage(named: "UnitDefault")!.withRenderingMode(.alwaysOriginal)
 }

@@ -8,17 +8,22 @@
 
 import UIKit
 
-class BookTableViewCell: UITableViewCell {
+class BookTableViewCell: KBaseTableCellXib {
+    
+    @IBOutlet weak var imgUnit: UIImageView!
+    @IBOutlet weak var lbUnitName: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override func setUpViews() {
+        super.setUpViews()
+        lineBottom.isHidden = false
+        imgUnit.setBorder(borderWidth: 1, borderColor: LEVColor.lineColor, cornerRadius: 0)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func bindData(data: LEVUnit) {
+        if let url = URL(string: data.urlUnit!) {
+            self.imgUnit.sd_setImage(with: url, placeholderImage: LEVImage.imgUnitDefault)
+        }
+        self.lbUnitName.text = data.nameUnit
     }
     
 }

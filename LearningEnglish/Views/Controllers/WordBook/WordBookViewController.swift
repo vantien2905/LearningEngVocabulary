@@ -33,6 +33,7 @@ class WordBookViewController: KBaseViewController {
                 cell.wordBook = wordbook
                 return cell
         }.disposed(by: bag)
+        
     }
     
     override func setUpNavigation() {
@@ -61,5 +62,12 @@ extension WordBookViewController: UICollectionViewDelegateFlowLayout {
         let width = (collectionView.frame.width - 10) / 2
         let height = collectionView.frame.height / 2.5
         return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let id = self.vmWordBook.getWordBookIdAt(index: indexPath.item)
+        let vc = ListUnitViewController.configureController(idWordbook: id)
+        
+        self.push(controller: vc, animated: true)
     }
 }

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckBoxView" customModule="Learning_English_Vocabulary" customModuleProvider="target">
+            <connections>
+                <outlet property="btnTickBox" destination="3xB-hO-xSM" id="0uK-R0-Mpn"/>
+                <outlet property="imgBox" destination="XDM-gs-Wn2" id="EOO-yS-eIp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="77" height="92"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CheckBox" translatesAutoresizingMaskIntoConstraints="NO" id="XDM-gs-Wn2">
+                    <rect key="frame" x="29" y="36.5" width="19" height="19"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xB-hO-xSM">
+                    <rect key="frame" x="0.0" y="0.0" width="77" height="92"/>
+                    <connections>
+                        <action selector="btnTickBoxTapped" destination="-1" eventType="touchUpInside" id="Zw3-t0-LjJ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3xB-hO-xSM" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="BCS-uu-YaC"/>
+                <constraint firstItem="3xB-hO-xSM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LEJ-QA-Mzx"/>
+                <constraint firstItem="XDM-gs-Wn2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="TEc-a6-bUa"/>
+                <constraint firstItem="3xB-hO-xSM" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="TX4-fJ-rfF"/>
+                <constraint firstItem="3xB-hO-xSM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="cTG-cC-ml2"/>
+                <constraint firstItem="XDM-gs-Wn2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vNv-X3-E5m"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-361.5" y="68"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CheckBox" width="19" height="19"/>
+    </resources>
+</document>

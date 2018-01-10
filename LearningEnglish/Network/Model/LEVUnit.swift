@@ -8,11 +8,12 @@
 
 import ObjectMapper
 
-class Unit: Mappable {
+class LEVUnit: Mappable {
     
     var idUnit: String?
     var idWordBook: String?
     var nameUnit: String?
+    var score: Int?
     var urlUnit: String?
     
     required init?(map: Map) {
@@ -23,6 +24,7 @@ class Unit: Mappable {
         self.idUnit <- map["idUnit"]
         self.idWordBook <- map["idWordBook"]
         self.nameUnit <- map["nameUnit"]
+        self.score <- map["score"]
         self.urlUnit <- map["urlUnit"]
     }
   
