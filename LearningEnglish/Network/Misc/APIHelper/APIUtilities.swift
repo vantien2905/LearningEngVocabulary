@@ -21,7 +21,7 @@ postfix func & <T>(element: T) -> String {
 // Safe Int
 postfix operator *
 
-postfix func *<T>(element: T?) -> Int {
+postfix func * <T>(element: T?) -> Int {
     return (element == nil) ? 0: Int("\(element!)")!
 }
 

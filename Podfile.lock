@@ -3,6 +3,11 @@ PODS:
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - ObjectMapper (3.1.0)
+  - Realm (3.0.2):
+    - Realm/Headers (= 3.0.2)
+  - Realm/Headers (3.0.2)
+  - RealmSwift (3.0.2):
+    - Realm (= 3.0.2)
   - RxCocoa (4.0.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.0.0)
@@ -14,6 +19,7 @@ PODS:
 DEPENDENCIES:
   - Action
   - ObjectMapper
+  - RealmSwift
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
   - SDWebImage
@@ -22,11 +28,13 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Action: d60087ebce41b969d1afdad01e2fa1372a82f26e
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
+  RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
   RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 033115881a6c6b300e971c3e1a4a9b17f6314b3e
+PODFILE CHECKSUM: 8c3b3faa0c9f1ef44b0708d946da8426fe00a016
 
 COCOAPODS: 1.3.1

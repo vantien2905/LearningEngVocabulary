@@ -5,8 +5,9 @@ disabled_rules: # rule identifiers to exclude from running
   - force_cast
   - shorthand_operator
   - type_name
+  - force_try
 
-opt_in_rules: 
+opt_in_rules:
   
 excluded:
   - Pods

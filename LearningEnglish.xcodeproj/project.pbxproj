@@ -52,8 +52,10 @@
 		DE5BA2371FFFC84A0002E12B /* KBaseTableCellXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5BA22D1FFFC8490002E12B /* KBaseTableCellXib.swift */; };
 		DE5BA2381FFFC84A0002E12B /* KPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5BA22F1FFFC84A0002E12B /* KPageViewController.swift */; };
 		DE5BA2391FFFC84A0002E12B /* KPageMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5BA2301FFFC84A0002E12B /* KPageMenuView.swift */; };
+		DE96864D2006590F00A2BEF3 /* LEVPercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96864C2006590F00A2BEF3 /* LEVPercentView.swift */; };
 		DEC9CD4D1FB6EECD0095EF8A /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC9CD4B1FB6EECD0095EF8A /* Fabric.framework */; };
 		DEC9CD4E1FB6EECD0095EF8A /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC9CD4C1FB6EECD0095EF8A /* Crashlytics.framework */; };
+		DEE657292003977A0080F65E /* KRealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE657282003977A0080F65E /* KRealmHelper.swift */; };
 		DEE914751FAF03F500FA9B63 /* LEVBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE914741FAF03F500FA9B63 /* LEVBaseCollectionViewCell.swift */; };
 		DEE914791FAF080F00FA9B63 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE914781FAF080F00FA9B63 /* UIViewX.swift */; };
 		FD1B0F4E1FAEABC400B9321D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1B0F4C1FAEABC400B9321D /* LogInViewController.swift */; };
@@ -136,8 +138,10 @@
 		DE5BA22D1FFFC8490002E12B /* KBaseTableCellXib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBaseTableCellXib.swift; sourceTree = "<group>"; };
 		DE5BA22F1FFFC84A0002E12B /* KPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPageViewController.swift; sourceTree = "<group>"; };
 		DE5BA2301FFFC84A0002E12B /* KPageMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KPageMenuView.swift; sourceTree = "<group>"; };
+		DE96864C2006590F00A2BEF3 /* LEVPercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEVPercentView.swift; sourceTree = "<group>"; };
 		DEC9CD4B1FB6EECD0095EF8A /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		DEC9CD4C1FB6EECD0095EF8A /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		DEE657282003977A0080F65E /* KRealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KRealmHelper.swift; sourceTree = "<group>"; };
 		DEE914741FAF03F500FA9B63 /* LEVBaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEVBaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		DEE914781FAF080F00FA9B63 /* UIViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		F76C6920FA06C5880C044AFC /* Pods-LearningEnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningEnglish.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish.release.xcconfig"; sourceTree = "<group>"; };
@@ -382,6 +386,22 @@
 			path = KPageViewController;
 			sourceTree = "<group>";
 		};
+		DE96864B200658F400A2BEF3 /* LEVPercentView */ = {
+			isa = PBXGroup;
+			children = (
+				DE96864C2006590F00A2BEF3 /* LEVPercentView.swift */,
+			);
+			path = LEVPercentView;
+			sourceTree = "<group>";
+		};
+		DEE65727200397630080F65E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DEE657282003977A0080F65E /* KRealmHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		DEE914731FAF031B00FA9B63 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -537,9 +557,9 @@
 		FDCC289C1FA07651009728F1 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				DEE65727200397630080F65E /* Helper */,
 				FDCC28A31FA076E0009728F1 /* Constant */,
 				FDCC28A21FA076D5009728F1 /* Extension */,
-				FDCC28A11FA076C9009728F1 /* Helper */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -559,13 +579,6 @@
 				FDCC28A41FA07710009728F1 /* CustomView */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		FDCC28A11FA076C9009728F1 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 		FDCC28A21FA076D5009728F1 /* Extension */ = {
@@ -601,6 +614,7 @@
 		FDCC28A41FA07710009728F1 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				DE96864B200658F400A2BEF3 /* LEVPercentView */,
 				DEE914771FAF080100FA9B63 /* UIViewX */,
 				FD1B0F591FAEB96B00B9321D /* LEVTextField */,
 				FD1B0F561FAEB92100B9321D /* BaseView */,
@@ -743,6 +757,8 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -752,6 +768,8 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -837,6 +855,7 @@
 				DE5BA2381FFFC84A0002E12B /* KPageViewController.swift in Sources */,
 				DE5BA2181FFFC75E0002E12B /* UIColor+extension.swift in Sources */,
 				FDCC288B1FA075B2009728F1 /* ViewController.swift in Sources */,
+				DE96864D2006590F00A2BEF3 /* LEVPercentView.swift in Sources */,
 				FD79B1201FD3A4FF00D533FC /* UnitPracticeTableViewCell.swift in Sources */,
 				DE527E4E20008A9500D598DF /* APIWordBook.swift in Sources */,
 				DE5BA1FE1FFFC6E80002E12B /* ApiError.swift in Sources */,
@@ -861,6 +880,7 @@
 				DE527E4C20008A1F00D598DF /* WordBook.swift in Sources */,
 				DE5BA21E1FFFC75E0002E12B /* UIApplication+extension.swift in Sources */,
 				DE5BA2201FFFC75E0002E12B /* UIWindow+extension.swift in Sources */,
+				DEE657292003977A0080F65E /* KRealmHelper.swift in Sources */,
 				FD6440A41FCE9B2000D8C782 /* HomeCollectionViewCell.swift in Sources */,
 				DE5BA2351FFFC84A0002E12B /* KBaseCollectionCell.swift in Sources */,
 				DE5BA21A1FFFC75E0002E12B /* UIButton+extension.swift in Sources */,

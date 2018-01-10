@@ -30,7 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func goToStartApp() {
-//        let vc  = UINavigationController(rootViewController: WordBookViewController.initFromNib())
         window?.show(rootViewController: TabbarMainViewController())
     }
 

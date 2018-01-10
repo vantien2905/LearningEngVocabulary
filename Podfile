@@ -14,5 +14,7 @@ target 'LearningEnglish' do
 
     # other
     pod 'SDWebImage'
+    
+    pod 'RealmSwift'
 
 end
