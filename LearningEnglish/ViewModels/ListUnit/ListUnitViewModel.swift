@@ -35,7 +35,8 @@ class ListUnitViewModel {
         APIProvider(target: APIListUnit.getAllListUnit(idWordBook: id))
             .rxRequestArray(LEVUnit.self)
             .subscribe(onNext: { units in
-            self.outputs.listUnit.value = units
+                KRealmHelper.shared.dbAddObjects(units, update: true)
+                self.outputs.listUnit.value = units
         }, onError: { error in
             print(error.localizedDescription)
         }).disposed(by: bag)

@@ -7,17 +7,22 @@
 //
 
 import ObjectMapper
+import RealmSwift
 
-class LEVUnit: Mappable {
+class LEVUnit: Object, Mappable {
     
-    var idUnit: String?
-    var idWordBook: String?
-    var nameUnit: String?
-    var score: Int?
-    var urlUnit: String?
+    @objc dynamic var idUnit: String?
+    @objc dynamic var idWordBook: String?
+    @objc dynamic var nameUnit: String?
+    @objc dynamic var urlUnit: String?
+    @objc dynamic var score: Int = 0
     
-    required init?(map: Map) {
-        
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    override static func primaryKey() -> String? {
+        return "idUnit"
     }
     
     func mapping(map: Map) {
