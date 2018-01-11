@@ -62,8 +62,10 @@ class KRealmHelper {
     }
     
     func dbAddObjects(_ objects: [Object], update: Bool = false) {
-        try! realm.write {
-            self.realm.add(objects, update: update)
+        DispatchQueue.main.async {
+            try! self.realm.write {
+                self.realm.add(objects, update: update)
+            }
         }
     }
     

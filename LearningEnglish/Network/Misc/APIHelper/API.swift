@@ -61,7 +61,7 @@ extension API {
         return Observable.create({ observer -> Disposable in
             URLRequest.request(target: target)
                 .flatMap { self.session.rx.response(request: $0) }
-                .subscribe(onNext: { response, data in
+                .subscribe(onNext: {response, data in
                     let json = JSON(data)
                     let jsonStatus = json[APIKeyParam.status.rawValue]
                     let statusError = Mapper<StatusError>().map(JSONObject: jsonStatus.dictionaryObject)

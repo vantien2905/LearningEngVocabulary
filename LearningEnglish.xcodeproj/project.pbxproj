@@ -13,6 +13,7 @@
 		172E7464200517F500853D41 /* ListUnitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E7463200517F500853D41 /* ListUnitViewModel.swift */; };
 		172E7467200523E300853D41 /* LEVUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E7466200523E300853D41 /* LEVUnit.swift */; };
 		51E88EEB914F7B14ECBD46B7 /* Pods_LearningEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB74314B60C719C34F0375BE /* Pods_LearningEnglish.framework */; };
+		DE281DF520079E1F0092A536 /* DownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE281DF420079E1F0092A536 /* DownloadHelper.swift */; };
 		DE527E4C20008A1F00D598DF /* WordBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE527E4B20008A1F00D598DF /* WordBook.swift */; };
 		DE527E4E20008A9500D598DF /* APIWordBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE527E4D20008A9500D598DF /* APIWordBook.swift */; };
 		DE527E5220008DD500D598DF /* WordBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE527E5020008DD500D598DF /* WordBookViewController.swift */; };
@@ -100,6 +101,7 @@
 		AB74314B60C719C34F0375BE /* Pods_LearningEnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearningEnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C2282A506E4C5F71A94DF3 /* Pods-LearningEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningEnglish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish.debug.xcconfig"; sourceTree = "<group>"; };
 		BC724E86A9F9BC8A97BA0F13 /* Pods-LearningEnglish.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningEnglish.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish.appstore.xcconfig"; sourceTree = "<group>"; };
+		DE281DF420079E1F0092A536 /* DownloadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadHelper.swift; sourceTree = "<group>"; };
 		DE527E4B20008A1F00D598DF /* WordBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordBook.swift; sourceTree = "<group>"; };
 		DE527E4D20008A9500D598DF /* APIWordBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWordBook.swift; sourceTree = "<group>"; };
 		DE527E5020008DD500D598DF /* WordBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordBookViewController.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				DE5BA1F21FFFC6E80002E12B /* APIHelper */,
 				DE5BA1F71FFFC6E80002E12B /* APIProvider.swift */,
 				DE5BA1F81FFFC6E80002E12B /* ExtensionAPI */,
+				DE281DF420079E1F0092A536 /* DownloadHelper.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -757,6 +760,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -768,6 +772,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -894,6 +899,7 @@
 				DE5BA2051FFFC6E80002E12B /* URLRequest+extension.swift in Sources */,
 				DE5BA2031FFFC6E80002E12B /* TargetType.swift in Sources */,
 				DE5BA2321FFFC84A0002E12B /* KBaseViewXib.swift in Sources */,
+				DE281DF520079E1F0092A536 /* DownloadHelper.swift in Sources */,
 				DE5BA1FF1FFFC6E80002E12B /* ParameterEncoding.swift in Sources */,
 				DE5BA2061FFFC6E80002E12B /* API.swift in Sources */,
 				FDCC28B01FA07E20009728F1 /* LEVConstant.swift in Sources */,
