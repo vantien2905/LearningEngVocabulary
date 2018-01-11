@@ -11,6 +11,8 @@ import RxSwift
 
 class WordBookViewModel {
     let bag = DisposeBag()
+    var inputs = WordBookInput()
+    var outputs = WordBookOutput()
     
     // input
     class WordBookInput {
@@ -32,6 +34,9 @@ class WordBookViewModel {
             .disposed(by: bag)
     }
     
-    var inputs = WordBookInput()
-    var outputs = WordBookOutput()
+    func getWordBookIdAt(index: Int) -> String?{
+        return self.outputs.listWordBook.value[index].idWordBook
+    }
+    
+   
 }
