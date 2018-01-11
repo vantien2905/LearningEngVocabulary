@@ -7,15 +7,23 @@
 //
 
 import ObjectMapper
+import RealmSwift
 
-class WordBook: Mappable {
+class WordBook: Object, Mappable {
     
-    var idWordBook: String?
-    var nameWordBook: String?
-    var urlWordBook: String?
+    @objc dynamic var idWordBook: String?
+    @objc dynamic var nameWordBook: String?
+    @objc dynamic var urlWordBook: String?
     
-    required init?(map: Map) {
-        
+    // offline
+    @objc dynamic var urlImageLocal: String?
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    override static func primaryKey() -> String? {
+        return "idWordBook"
     }
     
     func mapping(map: Map) {
