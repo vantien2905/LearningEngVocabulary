@@ -38,6 +38,7 @@ class ListUnitViewController: KBaseViewController {
     }
     
     private func vmBindToVC() {
+        showError(message: "day la message")
         vmListUnit.getAllUnit()
         
         vmListUnit.outputs.listUnit.asObservable().bind(to: tbBook.rx.items) { table, _, unit in

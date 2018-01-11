@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17106C1C2007A52A0038C79E /* KBaseViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17106C1B2007A52A0038C79E /* KBaseViewController+extension.swift */; };
+		17106C1E2007A68A0038C79E /* LEVConstantMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17106C1D2007A68A0038C79E /* LEVConstantMessage.swift */; };
 		172E74602005131500853D41 /* APIListUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E745F2005131500853D41 /* APIListUnit.swift */; };
 		172E7464200517F500853D41 /* ListUnitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E7463200517F500853D41 /* ListUnitViewModel.swift */; };
 		172E7467200523E300853D41 /* LEVUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E7466200523E300853D41 /* LEVUnit.swift */; };
@@ -85,11 +87,13 @@
 		FDCC28931FA075B2009728F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCC28911FA075B2009728F1 /* LaunchScreen.storyboard */; };
 		FDCC28AA1FA07A5B009728F1 /* StartAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCC28A81FA07A5B009728F1 /* StartAppViewController.swift */; };
 		FDCC28AB1FA07A5B009728F1 /* StartAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDCC28A91FA07A5B009728F1 /* StartAppViewController.xib */; };
-		FDCC28B01FA07E20009728F1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCC28AF1FA07E20009728F1 /* Constant.swift */; };
-		FDCC28B21FA08EFE009728F1 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCC28B11FA08EFE009728F1 /* Enum.swift */; };
+		FDCC28B01FA07E20009728F1 /* LEVConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCC28AF1FA07E20009728F1 /* LEVConstant.swift */; };
+		FDCC28B21FA08EFE009728F1 /* LEVEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCC28B11FA08EFE009728F1 /* LEVEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17106C1B2007A52A0038C79E /* KBaseViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KBaseViewController+extension.swift"; sourceTree = "<group>"; };
+		17106C1D2007A68A0038C79E /* LEVConstantMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEVConstantMessage.swift; sourceTree = "<group>"; };
 		172E745F2005131500853D41 /* APIListUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIListUnit.swift; sourceTree = "<group>"; };
 		172E7463200517F500853D41 /* ListUnitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUnitViewModel.swift; sourceTree = "<group>"; };
 		172E7466200523E300853D41 /* LEVUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEVUnit.swift; sourceTree = "<group>"; };
@@ -173,8 +177,8 @@
 		FDCC28941FA075B2009728F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDCC28A81FA07A5B009728F1 /* StartAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAppViewController.swift; sourceTree = "<group>"; };
 		FDCC28A91FA07A5B009728F1 /* StartAppViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartAppViewController.xib; sourceTree = "<group>"; };
-		FDCC28AF1FA07E20009728F1 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		FDCC28B11FA08EFE009728F1 /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		FDCC28AF1FA07E20009728F1 /* LEVConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEVConstant.swift; sourceTree = "<group>"; };
+		FDCC28B11FA08EFE009728F1 /* LEVEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEVEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -597,6 +601,7 @@
 				DE5BA2141FFFC75D0002E12B /* UIWindow+extension.swift */,
 				FD1B0F501FAEAE5A00B9321D /* UIViewController+Extension.swift */,
 				FD1B0F5C1FAEBA4F00B9321D /* UIView+Extension.swift */,
+				17106C1B2007A52A0038C79E /* KBaseViewController+extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -604,8 +609,9 @@
 		FDCC28A31FA076E0009728F1 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				FDCC28AF1FA07E20009728F1 /* Constant.swift */,
-				FDCC28B11FA08EFE009728F1 /* Enum.swift */,
+				FDCC28AF1FA07E20009728F1 /* LEVConstant.swift */,
+				FDCC28B11FA08EFE009728F1 /* LEVEnum.swift */,
+				17106C1D2007A68A0038C79E /* LEVConstantMessage.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -857,11 +863,12 @@
 				DE5BA2021FFFC6E80002E12B /* APIKeyParam.swift in Sources */,
 				DE5BA2191FFFC75E0002E12B /* String+extension.swift in Sources */,
 				DE5BA2081FFFC6E80002E12B /* Data+extension.swift in Sources */,
+				17106C1C2007A52A0038C79E /* KBaseViewController+extension.swift in Sources */,
 				FD1B0F5D1FAEBA4F00B9321D /* UIView+Extension.swift in Sources */,
 				DE5BA2011FFFC6E80002E12B /* HTTPMethod.swift in Sources */,
 				DE5BA2391FFFC84A0002E12B /* KPageMenuView.swift in Sources */,
 				FD79B11C1FD3985400D533FC /* UnitTableViewCell.swift in Sources */,
-				FDCC28B21FA08EFE009728F1 /* Enum.swift in Sources */,
+				FDCC28B21FA08EFE009728F1 /* LEVEnum.swift in Sources */,
 				DE527E5220008DD500D598DF /* WordBookViewController.swift in Sources */,
 				DE5BA2341FFFC84A0002E12B /* KBaseCollectionCellXib.swift in Sources */,
 				DE5BA21C1FFFC75E0002E12B /* UIScreen+extension.swift in Sources */,
@@ -879,7 +886,6 @@
 				172E74602005131500853D41 /* APIListUnit.swift in Sources */,
 				DE5BA2201FFFC75E0002E12B /* UIWindow+extension.swift in Sources */,
 				DEE657292003977A0080F65E /* KRealmHelper.swift in Sources */,
-				FD6440A41FCE9B2000D8C782 /* HomeCollectionViewCell.swift in Sources */,
 				DE5BA2351FFFC84A0002E12B /* KBaseCollectionCell.swift in Sources */,
 				DE5BA21A1FFFC75E0002E12B /* UIButton+extension.swift in Sources */,
 				DEE914751FAF03F500FA9B63 /* LEVBaseCollectionViewCell.swift in Sources */,
@@ -890,7 +896,7 @@
 				DE5BA2321FFFC84A0002E12B /* KBaseViewXib.swift in Sources */,
 				DE5BA1FF1FFFC6E80002E12B /* ParameterEncoding.swift in Sources */,
 				DE5BA2061FFFC6E80002E12B /* API.swift in Sources */,
-				FDCC28B01FA07E20009728F1 /* Constant.swift in Sources */,
+				FDCC28B01FA07E20009728F1 /* LEVConstant.swift in Sources */,
 				DE5BA21F1FFFC75E0002E12B /* UIImage+extension.swift in Sources */,
 				DE5BA2211FFFC75E0002E12B /* Date+extension.swift in Sources */,
 				DE5BA2221FFFC75E0002E12B /* ObservableType+extension.swift in Sources */,
@@ -904,6 +910,7 @@
 				DE5BA2361FFFC84A0002E12B /* KBaseTableCell.swift in Sources */,
 				DE5BA2041FFFC6E80002E12B /* APIUtilities.swift in Sources */,
 				DE5BA2001FFFC6E80002E12B /* HTTPBody.swift in Sources */,
+				17106C1E2007A68A0038C79E /* LEVConstantMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
