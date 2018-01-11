@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class UnitDetailViewController: KBaseViewController {
     @IBOutlet weak var btnGame: UIButton!
@@ -14,12 +15,22 @@ class UnitDetailViewController: KBaseViewController {
     @IBOutlet weak var btnTranslate: UIButton!
     
     @IBOutlet weak var tbUnit: UITableView!
+    let vmUnitDetail = UnitDetailViewModel()
+    let disposeBag = DisposeBag()
 
     let cellId = "UnitTableViewCell"
-    let cellPracticeId = "cellPractice"
+    let cellPracticeId = "UnitPracticeTableViewCell"
+    
+    var listVocabulary = [Vocabulary]() {
+        didSet {
+            tbUnit.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTable()
+        bindData()
     }
     
     override func setUpViews() {
@@ -32,31 +43,39 @@ class UnitDetailViewController: KBaseViewController {
     }
     
     func configureTable() {
-        let nib = UINib(nibName: "UnitTableViewCell", bundle: nil)
+        let nib = UINib(nibName: cellId, bundle: nil)
         tbUnit.register(nib, forCellReuseIdentifier: cellId)
-        let practiceNib = UINib(nibName: "UnitPracticeTableViewCell", bundle: nil)
+        let practiceNib = UINib(nibName: cellPracticeId, bundle: nil)
         tbUnit.register(practiceNib, forCellReuseIdentifier: cellPracticeId)
         tbUnit.dataSource = self
         tbUnit.delegate = self
+    }
+    
+    func bindData() {
+        vmUnitDetail.outputs.listVocabulary.asObservable().subscribe(onNext: { _listVocabulary in
+            self.listVocabulary = _listVocabulary
+        }).disposed(by: disposeBag)
     }
 
 }
 
 extension UnitDetailViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.item == 9 {
+        if indexPath.item == 20 {
             let cell = tbUnit.dequeueReusableCell(withIdentifier: cellPracticeId, for: indexPath)
             
             return cell
         } else {
-            let cell = tbUnit.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-            
+            let cell = tbUnit.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UnitTableViewCell
+            if self.listVocabulary.count != 0 {
+                cell.vocabulary = self.listVocabulary[indexPath.row]
+            }
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return listVocabulary.count + 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-let baseUrlAPI = "http://localhost:3000/"
+let baseUrlAPI = "http://192.168.1.10:3000/"
 let ContentTypeAPI = "Content-Type"
 
 protocol TargetType {

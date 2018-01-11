@@ -14,7 +14,7 @@ class WordBookViewModel {
     
     // input
     class WordBookInput {
-        
+    
     }
     
     // output

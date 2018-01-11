@@ -1,29 +1,32 @@
 //
-//  APIWordBook.swift
+//  APIUnitDetail.swift
 //  LearningEnglish
 //
-//  Created by Kai Pham on 1/6/18.
+//  Created by Felix Dinh on 1/9/18.
 //  Copyright © 2018 Tien Dinh. All rights reserved.
 //
 
 import UIKit
 
-enum APIWordbook {
-    case getAllWordBook()
+enum APIUnitDetail {
+    case getUnitDetail(idListUnit: String)
 }
 
-extension APIWordbook: TargetType {
+extension APIUnitDetail: TargetType {
     var baseURL: String {
         return baseUrlAPI
     }
     
     var path: String? {
-        return "api/v1/wordbook"
+        switch self {
+        case .getUnitDetail(let id):
+            return "api/v1/vocabularyofunit/\(id)"
+        }
     }
     
     var method: HTTPMethod {
         return .get
-    }
+   }
     
     var parameters: [String: Any]? {
         return nil
@@ -36,5 +39,4 @@ extension APIWordbook: TargetType {
     var headers: [String: String]? {
         return nil
     }
-    
 }

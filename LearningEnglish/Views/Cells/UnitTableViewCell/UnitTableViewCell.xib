@@ -36,8 +36,8 @@
                         <rect key="frame" x="80" y="10" width="354" height="40"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abide by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWk-Vr-RCo">
-                                <rect key="frame" x="151.5" y="0.0" width="52" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <rect key="frame" x="149.5" y="0.0" width="55" height="16"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -54,7 +54,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker" translatesAutoresizingMaskIntoConstraints="NO" id="FXZ-CX-ciA">
-                                <rect key="frame" x="208.5" y="0.5" width="25" height="15"/>
+                                <rect key="frame" x="209.5" y="1" width="25" height="15"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="LcC-2K-CxH"/>
@@ -115,6 +115,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgWord" destination="PRw-Ea-peR" id="Mj7-Nr-aQR"/>
+                <outlet property="lbExample" destination="YBp-T6-zVY" id="Een-VA-Yxu"/>
+                <outlet property="lbVietnameseWord" destination="YUp-Dj-EAJ" id="uZO-jG-G5X"/>
+                <outlet property="lbViewnameseExample" destination="nPt-lm-PUy" id="0iL-nI-Wc6"/>
+                <outlet property="lbVnRaw" destination="j5b-jT-DfY" id="jSc-sK-4Xo"/>
+                <outlet property="lbWord" destination="hWk-Vr-RCo" id="8Mm-TZ-R0f"/>
+            </connections>
             <point key="canvasLocation" x="96" y="131.5"/>
         </tableViewCell>
     </objects>

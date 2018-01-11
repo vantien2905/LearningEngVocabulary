@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		51E88EEB914F7B14ECBD46B7 /* Pods_LearningEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB74314B60C719C34F0375BE /* Pods_LearningEnglish.framework */; };
+		B752D6162005128B00A3A2F3 /* APIUnitDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B752D6152005128B00A3A2F3 /* APIUnitDetail.swift */; };
+		B752D61920051E0600A3A2F3 /* UnitDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B752D61820051E0600A3A2F3 /* UnitDetailViewModel.swift */; };
+		B752D61B20051FBB00A3A2F3 /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B752D61A20051FBB00A3A2F3 /* Vocabulary.swift */; };
 		DE527E4C20008A1F00D598DF /* WordBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE527E4B20008A1F00D598DF /* WordBook.swift */; };
 		DE527E4E20008A9500D598DF /* APIWordBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE527E4D20008A9500D598DF /* APIWordBook.swift */; };
 		DE527E5220008DD500D598DF /* WordBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE527E5020008DD500D598DF /* WordBookViewController.swift */; };
@@ -86,6 +89,9 @@
 
 /* Begin PBXFileReference section */
 		AB74314B60C719C34F0375BE /* Pods_LearningEnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearningEnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B752D6152005128B00A3A2F3 /* APIUnitDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUnitDetail.swift; sourceTree = "<group>"; };
+		B752D61820051E0600A3A2F3 /* UnitDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDetailViewModel.swift; sourceTree = "<group>"; };
+		B752D61A20051FBB00A3A2F3 /* Vocabulary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vocabulary.swift; sourceTree = "<group>"; };
 		B7C2282A506E4C5F71A94DF3 /* Pods-LearningEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningEnglish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish.debug.xcconfig"; sourceTree = "<group>"; };
 		BC724E86A9F9BC8A97BA0F13 /* Pods-LearningEnglish.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningEnglish.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish.appstore.xcconfig"; sourceTree = "<group>"; };
 		DE527E4B20008A1F00D598DF /* WordBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordBook.swift; sourceTree = "<group>"; };
@@ -193,6 +199,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B752D6142005127100A3A2F3 /* UnitDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B752D6152005128B00A3A2F3 /* APIUnitDetail.swift */,
+			);
+			path = UnitDetail;
+			sourceTree = "<group>";
+		};
+		B752D61720051DE500A3A2F3 /* UnitDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B752D61820051E0600A3A2F3 /* UnitDetailViewModel.swift */,
+			);
+			path = UnitDetail;
+			sourceTree = "<group>";
+		};
 		DE527E49200089DE00D598DF /* Wordbook */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				DE527E4B20008A1F00D598DF /* WordBook.swift */,
+				B752D61A20051FBB00A3A2F3 /* Vocabulary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,6 +245,7 @@
 		DE527E5620008ED100D598DF /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B752D61720051DE500A3A2F3 /* UnitDetail */,
 				DE527E5720008ED100D598DF /* WordBook */,
 			);
 			path = ViewModels;
@@ -325,6 +349,7 @@
 		DE5BA1FA1FFFC6E80002E12B /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				B752D6142005127100A3A2F3 /* UnitDetail */,
 				DE527E49200089DE00D598DF /* Wordbook */,
 			);
 			path = Request;
@@ -809,6 +834,7 @@
 				FDCC288B1FA075B2009728F1 /* ViewController.swift in Sources */,
 				FD79B1201FD3A4FF00D533FC /* UnitPracticeTableViewCell.swift in Sources */,
 				DE527E4E20008A9500D598DF /* APIWordBook.swift in Sources */,
+				B752D61B20051FBB00A3A2F3 /* Vocabulary.swift in Sources */,
 				DE5BA1FE1FFFC6E80002E12B /* ApiError.swift in Sources */,
 				DE5BA2021FFFC6E80002E12B /* APIKeyParam.swift in Sources */,
 				DE5BA2191FFFC75E0002E12B /* String+extension.swift in Sources */,
@@ -838,6 +864,7 @@
 				DE5BA2171FFFC75E0002E12B /* UISlider+extension.swift in Sources */,
 				DE5BA2051FFFC6E80002E12B /* URLRequest+extension.swift in Sources */,
 				DE5BA2031FFFC6E80002E12B /* TargetType.swift in Sources */,
+				B752D61920051E0600A3A2F3 /* UnitDetailViewModel.swift in Sources */,
 				DE5BA2321FFFC84A0002E12B /* KBaseViewXib.swift in Sources */,
 				DE5BA1FF1FFFC6E80002E12B /* ParameterEncoding.swift in Sources */,
 				DE5BA2061FFFC6E80002E12B /* API.swift in Sources */,
@@ -847,6 +874,7 @@
 				DE5BA2221FFFC75E0002E12B /* ObservableType+extension.swift in Sources */,
 				DE5BA2311FFFC84A0002E12B /* KBaseViewController.swift in Sources */,
 				DE5BA21B1FFFC75E0002E12B /* UICollection+extension.swift in Sources */,
+				B752D6162005128B00A3A2F3 /* APIUnitDetail.swift in Sources */,
 				DE5BA2331FFFC84A0002E12B /* KBaseView.swift in Sources */,
 				FDCC28AA1FA07A5B009728F1 /* StartAppViewController.swift in Sources */,
 				FD79B10D1FD38E5000D533FC /* ListUnitViewController.swift in Sources */,
