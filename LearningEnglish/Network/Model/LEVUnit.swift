@@ -15,7 +15,10 @@ class LEVUnit: Object, Mappable {
     @objc dynamic var idWordBook: String?
     @objc dynamic var nameUnit: String?
     @objc dynamic var urlUnit: String?
-    @objc dynamic var score: Int = 0
+    var score = RealmOptional<Int>(nil)
+    
+    // offline
+    @objc dynamic var urlUnitLocal: String?
     
     required convenience init?(map: Map) {
         self.init()
@@ -32,5 +35,19 @@ class LEVUnit: Object, Mappable {
         self.score <- map["score"]
         self.urlUnit <- map["urlUnit"]
     }
-  
+    
+    // init to get image offline
+    convenience init(idUnit: String?, idWordBook: String?, nameUnit: String?, urlUnit: String?, score: Int?) {
+        self.init()
+        self.idUnit = idUnit
+        self.idWordBook = idWordBook
+        self.nameUnit = nameUnit
+        self.urlUnit = urlUnit
+        self.score.value = score
+        
+        let urlImage = FileManagerHelper.shared.imagesFolder.appendingPathComponent("\(idUnit&).jpg")
+        if FileManagerHelper.shared.checkExistFile(url: urlImage) {
+            urlUnitLocal = urlImage.absoluteString
+        }
+    }
 }
