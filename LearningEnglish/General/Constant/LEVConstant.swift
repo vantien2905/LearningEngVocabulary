@@ -8,6 +8,9 @@
 
 import Foundation
 import UIKit
+
+// MARK: LEVColor
+
 struct LEVColor {
     static let whiteColor = UIColor.white
     static let blackColor = UIColor.black
@@ -20,6 +23,8 @@ struct LEVColor {
     static let buttonGreen = UIColor.hexStringToUIColor(hex: "39b54a")
     static let titleGreen = UIColor.hexStringToUIColor(hex: "1d9571")
 }
+
+// MARK: LEVFont
 
 struct LEVFont {
     
@@ -43,13 +48,19 @@ struct LEVFont {
     static let fontBold17 = UIFont.monospacedDigitSystemFont(ofSize: 17.5, weight: .bold)
 }
 
+// MARK: LEVImage
+
 struct LEVImage {
-    static let imgBack = UIImage(named: "back")!
+    // Tabbar Icon
     static let imgBookTabbar = UIImage(named: "feeds")!.withRenderingMode(.alwaysOriginal)
     static let imgBookTabbarActive = UIImage(named: "feeds_active")!.withRenderingMode(.alwaysOriginal)
     static let imgSetting = UIImage(named: "settings")!.withRenderingMode(.alwaysOriginal)
     static let imgSettingActive = UIImage(named: "settings_active")!.withRenderingMode(.alwaysOriginal)
     static let imgUserTabbar = UIImage(named: "profile")!.withRenderingMode(.alwaysOriginal)
     static let imgUserTabbarActive = UIImage(named: "profile_active")!.withRenderingMode(.alwaysOriginal)
-    static let imgUnitDefault = UIImage(named: "UnitDefault")!.withRenderingMode(.alwaysOriginal)
+    
+    //
+    static let imgBack = UIImage(named: "back")!
+    static let imgUnitDefault = UIImage(named: "UnitDefault")!
+    static let imgWordbookDefault = UIImage(named: "book")!
 }

@@ -61,6 +61,7 @@
 		DE96864D2006590F00A2BEF3 /* LEVPercentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE96864C2006590F00A2BEF3 /* LEVPercentView.swift */; };
 		DEC9CD4D1FB6EECD0095EF8A /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC9CD4B1FB6EECD0095EF8A /* Fabric.framework */; };
 		DEC9CD4E1FB6EECD0095EF8A /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC9CD4C1FB6EECD0095EF8A /* Crashlytics.framework */; };
+		DEDF400620088E08002ACA82 /* FileManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF400520088E08002ACA82 /* FileManagerHelper.swift */; };
 		DEE657292003977A0080F65E /* KRealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE657282003977A0080F65E /* KRealmHelper.swift */; };
 		DEE914751FAF03F500FA9B63 /* LEVBaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE914741FAF03F500FA9B63 /* LEVBaseCollectionViewCell.swift */; };
 		DEE914791FAF080F00FA9B63 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE914781FAF080F00FA9B63 /* UIViewX.swift */; };
@@ -147,6 +148,7 @@
 		DE96864C2006590F00A2BEF3 /* LEVPercentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEVPercentView.swift; sourceTree = "<group>"; };
 		DEC9CD4B1FB6EECD0095EF8A /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		DEC9CD4C1FB6EECD0095EF8A /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		DEDF400520088E08002ACA82 /* FileManagerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerHelper.swift; sourceTree = "<group>"; };
 		DEE657282003977A0080F65E /* KRealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KRealmHelper.swift; sourceTree = "<group>"; };
 		DEE914741FAF03F500FA9B63 /* LEVBaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEVBaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		DEE914781FAF080F00FA9B63 /* UIViewX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 			isa = PBXGroup;
 			children = (
 				DEE657282003977A0080F65E /* KRealmHelper.swift */,
+				DEDF400520088E08002ACA82 /* FileManagerHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -526,32 +529,15 @@
 			isa = PBXGroup;
 			children = (
 				FDCC28881FA075B2009728F1 /* AppDelegate.swift */,
-				DE527E5620008ED100D598DF /* ViewModels */,
 				DE5BA1EA1FFFC6E80002E12B /* Network */,
+				DE527E5620008ED100D598DF /* ViewModels */,
 				FDCC289F1FA07680009728F1 /* Views */,
-				FDCC289E1FA07670009728F1 /* Locales */,
 				FDCC289C1FA07651009728F1 /* General */,
-				FDCC289B1FA0763E009728F1 /* Libraries */,
-				FDCC289A1FA075FA009728F1 /* SupportFile */,
 				FDCC288F1FA075B2009728F1 /* Assets.xcassets */,
 				FDCC28911FA075B2009728F1 /* LaunchScreen.storyboard */,
 				FDCC28941FA075B2009728F1 /* Info.plist */,
 			);
 			path = LearningEnglish;
-			sourceTree = "<group>";
-		};
-		FDCC289A1FA075FA009728F1 /* SupportFile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SupportFile;
-			sourceTree = "<group>";
-		};
-		FDCC289B1FA0763E009728F1 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Libraries;
 			sourceTree = "<group>";
 		};
 		FDCC289C1FA07651009728F1 /* General */ = {
@@ -562,13 +548,6 @@
 				FDCC28A21FA076D5009728F1 /* Extension */,
 			);
 			path = General;
-			sourceTree = "<group>";
-		};
-		FDCC289E1FA07670009728F1 /* Locales */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Locales;
 			sourceTree = "<group>";
 		};
 		FDCC289F1FA07680009728F1 /* Views */ = {
@@ -855,6 +834,7 @@
 				DE5BA2181FFFC75E0002E12B /* UIColor+extension.swift in Sources */,
 				DE96864D2006590F00A2BEF3 /* LEVPercentView.swift in Sources */,
 				FD79B1201FD3A4FF00D533FC /* UnitPracticeTableViewCell.swift in Sources */,
+				DEDF400620088E08002ACA82 /* FileManagerHelper.swift in Sources */,
 				DE527E4E20008A9500D598DF /* APIWordBook.swift in Sources */,
 				DE5BA1FE1FFFC6E80002E12B /* ApiError.swift in Sources */,
 				DE5BA2021FFFC6E80002E12B /* APIKeyParam.swift in Sources */,

@@ -16,26 +16,22 @@ enum FileTypeDownLoad: String {
 class DownLoadHelper {
     static let shared = DownLoadHelper()
     
-    private let imagesFolder = FileManager.default.urls(for: FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first!.appendingPathComponent("images")
-    
-    private let voicesFolder = FileManager.default.urls(for: FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first!.appendingPathComponent("voices")
-    
     func downLoadImage(url: URL, to name: String) -> Observable<Double> {
         //---
-        createFolder(url: imagesFolder)
+        FileManagerHelper.shared.createImageFolder()
         return downLoad(url: url, to: name, fileType: .image)
     }
     
     func downLoadVoice(url: URL, to name: String) -> Observable<Double> {
         //---
-        createFolder(url: voicesFolder)
+        FileManagerHelper.shared.createVoiceFolder()
         return downLoad(url: url, to: name, fileType: .mp3)
     }
     
     /********************************* HELPER *******************************/
     
     private func createFolder(url: URL) {
-        if !FileManager.default.fileExists(atPath: imagesFolder.path) {
+        if !FileManager.default.fileExists(atPath: url.path) {
             do {
                 try FileManager.default.createDirectory(atPath: url.path, withIntermediateDirectories: true, attributes: nil)
             } catch {
@@ -47,27 +43,39 @@ class DownLoadHelper {
     private func downLoad(url: URL, to name: String, fileType: FileTypeDownLoad) -> Observable<Double> {
         //---
         return Observable.create({ observer -> Disposable in
-            Alamofire.request(url)
-                .downloadProgress { progress in
-                    let percent = progress.fractionCompleted
-                    observer.onNext(percent)
-                    if percent == 1.0 {
-                        observer.onCompleted()
-                    }
-                }
-                .responseData { dataResponse in
-                    do {
-                        let fileUrl = self.imagesFolder.appendingPathComponent("\(name).\(fileType.rawValue)")
-                        if let data = dataResponse.data {
-                            print(fileUrl)
-                            try data.write(to: fileUrl, options: .atomic)
-                        }
-                    } catch {
-                        print("error when save file \(name).\(fileType.rawValue)")
-                        observer.onCompleted()
-                    }
+            
+            var fileUrl: URL!
+            
+            if fileType == .image {
+                fileUrl = FileManagerHelper.shared.imagesFolder.appendingPathComponent("\(name).\(fileType.rawValue)")
+            } else {
+                fileUrl = FileManagerHelper.shared.voicesFolder.appendingPathComponent("\(name).\(fileType.rawValue)")
             }
             
+            // only download one time
+            if FileManagerHelper.shared.checkExistFile(url: fileUrl) {
+                observer.onCompleted()
+            } else {
+                Alamofire.request(url)
+                    .downloadProgress { progress in
+                        let percent = progress.fractionCompleted
+                        observer.onNext(percent)
+                        if percent == 1.0 {
+                            observer.onCompleted()
+                        }
+                    }
+                    .responseData { dataResponse in
+                        do {
+                            if let data = dataResponse.data {
+                                print(fileUrl)
+                                try data.write(to: fileUrl, options: .atomic)
+                            }
+                        } catch {
+                            print("error when save file \(name).\(fileType.rawValue)")
+                            observer.onCompleted()
+                        }
+                }
+            }
             return Disposables.create()
         })
     }

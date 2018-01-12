@@ -31,4 +31,17 @@ class WordBook: Object, Mappable {
         self.nameWordBook <- map["nameWordBook"]
         self.urlWordBook <- map["urlWordBook"]
     }
+    
+    // init to get image offline
+    convenience init(idWordBook: String?, nameWordBook: String?, urlWordBook: String?) {
+        self.init()
+        self.idWordBook = idWordBook
+        self.nameWordBook = nameWordBook
+        self.urlWordBook = urlWordBook
+        
+        let urlImage = FileManagerHelper.shared.imagesFolder.appendingPathComponent("\(idWordBook&).jpg")
+        if FileManagerHelper.shared.checkExistFile(url: urlImage) {
+            urlImageLocal = urlImage.absoluteString
+        }
+    }
 }
