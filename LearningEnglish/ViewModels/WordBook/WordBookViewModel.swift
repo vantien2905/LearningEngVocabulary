@@ -24,7 +24,13 @@ class WordBookViewModel {
         var listWordBook = Variable<[WordBook]>([])
         var errorMessage = PublishSubject<String>()
     }
-    
+    /**
+     1. get offline , if have data get image from local
+     2. get online then
+        2.1. reload data - if get offline is empty
+        2.2 download image into local (in function save, checked exist iamge or not yet )
+        2.3 save new data to realm when completed download image
+     */
     func getAllWordBook() {
         getWordBookOffline()
         getWordBookOnline()
@@ -39,14 +45,17 @@ extension WordBookViewModel {
     private func getWordBookOffline() {
         let wbOffline = KRealmHelper.shared.dbObjects(WordBook.self).toArray(ofType: WordBook.self)
         
-        //--- check iamge saved
-        let wbToShow = wbOffline.map { wb -> WordBook in
-            let newWb = WordBook(idWordBook: wb.idWordBook, nameWordBook: wb.nameWordBook, urlWordBook: wb.urlWordBook)
+        if !wbOffline.isEmpty {
+            //--- check iamge saved
+            let wbToShow = wbOffline.map { wb -> WordBook in
+                let newWb = WordBook(idWordBook: wb.idWordBook, nameWordBook: wb.nameWordBook, urlWordBook: wb.urlWordBook)
+                
+                return newWb
+            }
             
-            return newWb
+            self.outputs.listWordBook.value = wbToShow
         }
         
-        self.outputs.listWordBook.value = wbToShow
     }
     
     private func getWordBookOnline() {
