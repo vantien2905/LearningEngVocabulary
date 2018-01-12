@@ -11,9 +11,7 @@ import RxSwift
 import RxCocoa
 
 class ListUnitViewController: KBaseViewController {
-
     @IBOutlet weak var tbBook: UITableView!
-    let cellId = "BookTableViewCell"
     
     var idWordBook: String?
     
@@ -29,6 +27,7 @@ class ListUnitViewController: KBaseViewController {
     override func setUpNavigation() {
         super.setUpNavigation()
         setTitle(title: "600 Essential English Words")
+        addBackToNavigation()
     }
     
    static func configureController(idWordbook: String?) -> ListUnitViewController {

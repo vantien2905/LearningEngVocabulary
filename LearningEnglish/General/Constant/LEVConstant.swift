@@ -19,19 +19,6 @@ struct LEVColor {
     
     static let buttonGreen = UIColor.hexStringToUIColor(hex: "39b54a")
     static let titleGreen = UIColor.hexStringToUIColor(hex: "1d9571")
-    
-//    struct  ColorGlobal {
-//        static let titleGreen = UIColor(hex: "1d9571")
-//        static let buttonGreen =  UIColor(hex: "39b54a")
-//        static let backGround =  UIColor(hex: "f9f9f9")
-//        static let foreGround =  UIColor(hex: "ffffff")
-//        static let paragraphText =  UIColor(hex: "000000")
-//        static let smallTitle =  UIColor(hex: "6e6e6e")
-//        static let background241 =  UIColor(hex: "f1f1f1")
-//        static let backgroundGray = UIColor.blackColor().colorWithAlphaComponent(0.1)
-//        static let notificationRead = UIColor(hex: "f1f1f1")
-//        static let buttonGray = UIColor(hex: "b8b8b8")
-//    }
 }
 
 struct LEVFont {
@@ -57,6 +44,7 @@ struct LEVFont {
 }
 
 struct LEVImage {
+    static let imgBack = UIImage(named: "back")!
     static let imgBookTabbar = UIImage(named: "feeds")!.withRenderingMode(.alwaysOriginal)
     static let imgBookTabbarActive = UIImage(named: "feeds_active")!.withRenderingMode(.alwaysOriginal)
     static let imgSetting = UIImage(named: "settings")!.withRenderingMode(.alwaysOriginal)

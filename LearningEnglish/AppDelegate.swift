@@ -30,8 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func goToStartApp() {
-        let vc  = UINavigationController(rootViewController: TabbarMainViewController())
-        window?.show(rootViewController: vc )
+        window?.show(rootViewController: TabbarMainViewController())
 
     }
 

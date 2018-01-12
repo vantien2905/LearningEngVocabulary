@@ -108,7 +108,7 @@ class KBaseViewController: UIViewController {
         self.navigationItem.rightBarButtonItems = [button1, button2]
     }
     
-    func addButtonTextToNavigation(title: String, textColor: UIColor, font: UIFont, style: StyleNavigation, action: Selector?) {
+    func addButtonTextToNavigation(title: String, style: StyleNavigation, action: Selector?, textColor: UIColor = LEVColor.whiteColor, font: UIFont = LEVFont.fontBold17) {
         let btn = UIButton()
         btn.setAttributed(title: title, color: textColor, font: font)
         if let _action = action {
@@ -137,7 +137,7 @@ class KBaseViewController: UIViewController {
     }
     
     // use Cocoa Action
-    func addButtonTextToNavigation(title: String, textColor: UIColor, font: UIFont, style: StyleNavigation, action: CocoaAction?) {
+    func addButtonTextToNavigation(title: String, style: StyleNavigation, action: CocoaAction?, textColor: UIColor = LEVColor.whiteColor, font: UIFont = LEVFont.fontBold17) {
         var btn = UIButton()
         btn.setAttributed(title: title, color: textColor, font: font)
         btn.rx.action = action
@@ -166,5 +166,15 @@ class KBaseViewController: UIViewController {
             self.navigationItem.rightBarButtonItem = button
             btn.contentHorizontalAlignment = .right
         }
+    }
+}
+
+extension KBaseViewController {
+    func addBackToNavigation() {
+        addButtonImageToNavigation(image: LEVImage.imgBack, style: .left, action: #selector(btnBackTapped))
+    }
+    
+    @objc func btnBackTapped() {
+        self.pop()
     }
 }

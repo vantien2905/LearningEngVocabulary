@@ -40,7 +40,6 @@ class WordBookViewController: KBaseViewController {
         super.setUpNavigation()
         setTitle(title: "English Word Books")
     }
-    
 }
 
 // MARK: handle collection
