@@ -31,23 +31,24 @@ class ListUnitViewModel {
     }
     
     func getAllUnit() {
-        
+        getUnitOffline()
+        getUnitOnline()
     }
     
 }
 
 extension ListUnitViewModel {
-    private func getUnitOffline(idWordBook: String) {
-//        let wbOffline = KRealmHelper.shared.dbObjects(WordBook.self).toArray(ofType: WordBook.self)
-//
-//        //--- check iamge saved
-//        let wbToShow = wbOffline.map { wb -> WordBook in
-//            let newWb = WordBook(idWordBook: wb.idWordBook, nameWordBook: wb.nameWordBook, urlWordBook: wb.urlWordBook)
-//
-//            return newWb
-//        }
-//
-//        self.outputs.listWordBook.value = wbToShow
+    
+    private func getUnitOffline() {
+        
+        let unitOffline = KRealmHelper.shared.dbObjects(LEVUnit.self).toArray(ofType: LEVUnit.self)
+        if !unitOffline.isEmpty {
+            let unitToShow = unitOffline.map { unit -> LEVUnit in
+                let newUnit = LEVUnit(idUnit: unit.idUnit, idWordBook: unit.idWordBook, nameUnit: unit.nameUnit, urlUnit: unit.urlUnit, score: unit.score.value)
+                return newUnit
+            }
+            self.outputs.listUnit.value = unitToShow
+        }
     }
     
     private func getUnitOnline() {
@@ -56,8 +57,7 @@ extension ListUnitViewModel {
         APIProvider(target: APIListUnit.getAllListUnit(idWordBook: id))
             .rxRequestArray(LEVUnit.self)
             .subscribe(onNext: { units in
-                KRealmHelper.shared.dbAddObjects(units, update: true)
-                
+                self.downLoadImageUnit(listUnit: units)
                 
                 if self.outputs.listUnit.value.isEmpty {
                     self.outputs.listUnit.value = units
@@ -65,5 +65,20 @@ extension ListUnitViewModel {
             }, onError: { error in
                 self.outputs.errorMessage.onNext(error.localizedDescription)
             }).disposed(by: bag)
+    }
+    
+    private func downLoadImageUnit(listUnit: [LEVUnit]) {
+        var tempCount = 0
+        listUnit.forEach { unit in
+            if let id = unit.idUnit, let urlImage = unit.urlUnit, let url = URL(string: urlImage) {
+                DownLoadHelper.shared.downLoadImage(url: url, to: id).subscribe( onCompleted: {
+                    tempCount += 1
+                    if tempCount == listUnit.count {
+                        KRealmHelper.shared.dbAddObjects(listUnit, update: true)
+                    }
+                }).disposed(by: bag)
+            }
+        }
+        
     }
 }

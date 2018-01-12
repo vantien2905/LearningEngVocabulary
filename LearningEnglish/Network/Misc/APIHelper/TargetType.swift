@@ -8,7 +8,7 @@
 
 import Foundation
 
-let baseUrlAPI = "http://192.168.2.120:3000/"
+let baseUrlAPI = "http://192.168.1.2:3000/"
 
 let ContentTypeAPI = "Content-Type"
 
