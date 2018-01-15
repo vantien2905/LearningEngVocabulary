@@ -24,13 +24,23 @@ class UnitDetailViewModel {
     var outputs = UnitDetailOutput()
     
     init() {
-        getListVocabulary()
+        getAllVocabulary()
     }
     
-    func getListVocabulary() {
+    func getListVocabularyOffline() {
+        let listVocabulary = KRealmHelper.shared.dbObjects(Vocabulary.self).toArray(ofType: Vocabulary.self)
+    }
+    
+    func getListVocabularyOnline() {
         APIProvider(target: APIUnitDetail.getUnitDetail(idListUnit: "u1_1"))
             .rxRequestArray(Vocabulary.self).subscribe(onNext: { listVocabulary in
+                KRealmHelper.shared.dbAddObjects(listVocabulary, update: true)
                 self.outputs.listVocabulary.value = listVocabulary
             }).disposed(by: disposeBag)
+    }
+    
+    func getAllVocabulary() {
+        getListVocabularyOffline()
+        getListVocabularyOnline()
     }
 }

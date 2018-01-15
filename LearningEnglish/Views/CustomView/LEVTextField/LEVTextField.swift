@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LEVTextField: KBaseView {
+class LEVTextField: LEVBaseView {
     let vBackground: UIView = {
         let view = UIView()
         view.backgroundColor = LEVColor.grayColor

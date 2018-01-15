@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsViewController: KBaseViewController {
+class SettingsViewController: LEVBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,6 @@ class SettingsViewController: KBaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

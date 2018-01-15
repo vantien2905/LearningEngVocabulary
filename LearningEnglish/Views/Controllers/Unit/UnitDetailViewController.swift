@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-class UnitDetailViewController: KBaseViewController {
+class UnitDetailViewController: LEVBaseViewController {
     @IBOutlet weak var btnGame: UIButton!
     @IBOutlet weak var btnPractice: UIButton!
     @IBOutlet weak var btnTranslate: UIButton!
@@ -34,12 +34,22 @@ class UnitDetailViewController: KBaseViewController {
     }
     
     override func setUpViews() {
-        setTitle(title: "Unit1: Contacts")
+        
         btnGame.layer.cornerRadius = 5
         btnPractice.layer.cornerRadius = 5
         btnTranslate.layer.cornerRadius = 5
         btnTranslate.layer.borderWidth = 1
         btnTranslate.layer.borderColor = UIColor.black.withAlphaComponent(0.5).cgColor
+    }
+    
+    override func setUpNavigation() {
+        super.setUpNavigation()
+        setTitle(title: "Unit1: Contacts")
+        self.addButtonTextToNavigation(title: "Back", textColor: .white, font: LEVFont.fontBold17, style: .left, action: #selector(btnBackTapped))
+    }
+    
+    @objc func btnBackTapped() {
+        self.pop()
     }
     
     func configureTable() {

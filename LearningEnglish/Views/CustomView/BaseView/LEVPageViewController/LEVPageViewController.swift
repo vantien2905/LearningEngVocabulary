@@ -1,5 +1,5 @@
 //
-//  KPageViewController.swift
+//  LEVPageViewController.swift
 //  CodeBaseNetWork
 //
 //  Created by Kai Pham on 12/28/17.
@@ -16,7 +16,7 @@ import RxSwift
  3. setUpController
  */
 
-class KPageViewController: KBaseViewController {
+class LEVPageViewController: LEVBaseViewController {
     
     private let vContaintMenu: UIView = {
         let view = UIView()
@@ -25,8 +25,8 @@ class KPageViewController: KBaseViewController {
         return view
     }()
     
-    private let vMenu: KPageMenuView = {
-        let view = KPageMenuView()
+    private let vMenu: LEVPageMenuView = {
+        let view = LEVPageMenuView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .clear
         return view
@@ -115,7 +115,7 @@ class KPageViewController: KBaseViewController {
     }
 }
 
-extension KPageViewController: KPageMenuViewDelegate {
+extension LEVPageViewController: KPageMenuViewDelegate {
     func setUpViewMenu(menuColorBackground: UIColor, menuFont: UIFont, menuColorNormal: UIColor, menuColorSelected: UIColor, menuColorHorizontal: UIColor, heightHorizontal: CGFloat, listItem: [KCategory], isFull: Bool = false, isHaveLineTop: Bool = false) {
         vMenu.backgroundColor = menuColorBackground
         vMenu.menuFont = menuFont
@@ -157,7 +157,7 @@ extension KPageViewController: KPageMenuViewDelegate {
 }
 
 // MARK: handle Collection view
-extension KPageViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+extension LEVPageViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func configureCollection() {
         cvContentController.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         cvContentController.delegate = self
@@ -198,7 +198,7 @@ extension KPageViewController: UICollectionViewDelegateFlowLayout, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         let controler = controllers[indexPath.item]
-        if let _con = controler as? KPageViewController {
+        if let _con = controler as? LEVPageViewController {
             _con.cvContentController.reloadData()
         } else {
             controler.viewWillAppear(true)
@@ -206,7 +206,7 @@ extension KPageViewController: UICollectionViewDelegateFlowLayout, UICollectionV
     }
 }
 
-extension KPageViewController {
+extension LEVPageViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         

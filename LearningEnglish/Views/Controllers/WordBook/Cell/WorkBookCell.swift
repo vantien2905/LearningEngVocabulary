@@ -9,7 +9,7 @@
 import UIKit
 import SDWebImage
 
-class WorkBookCell: KBaseCollectionCellXib {
+class WorkBookCell: LEVBaseCollectionCellXib {
 
     @IBOutlet weak var imgIcon: UIImageView!
     @IBOutlet weak var lbName: UILabel!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LogInViewController: KBaseViewController {
+class LogInViewController: LEVBaseViewController {
     @IBOutlet weak var tfUserName: LEVTextField!
     @IBOutlet weak var tfPassWord: LEVTextField!
     @IBOutlet weak var btEnter: UIButton!

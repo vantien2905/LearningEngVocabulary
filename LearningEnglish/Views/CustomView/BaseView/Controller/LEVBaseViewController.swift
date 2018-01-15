@@ -1,5 +1,5 @@
 //
-//  KBaseViewController.swift
+//  LEVBaseViewController.swift
 //  CodeBaseNetWork
 //
 //  Created by Kai Pham on 12/28/17.
@@ -16,7 +16,7 @@ enum StyleNavigation {
     case right
 }
 
-class KBaseViewController: UIViewController {
+class LEVBaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

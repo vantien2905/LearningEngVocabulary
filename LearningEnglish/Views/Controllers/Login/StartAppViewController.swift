@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import Crashlytics
 
-class StartAppViewController: KBaseViewController {
+class StartAppViewController: LEVBaseViewController {
     @IBAction func btnLogIn() {
         let vc = LogInViewController.initFromNib()
         self.push(controller: vc)

@@ -1,5 +1,5 @@
 //
-//  KBaseView.swift
+//  LEVBaseView.swift
 //  CodeBaseNetWork
 //
 //  Created by Kai Pham on 12/28/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KBaseView: UIView {
+class LEVBaseView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpViews()

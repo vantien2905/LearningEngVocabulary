@@ -36,8 +36,8 @@ extension UITableView {
         }
     }
     
-    func dequeueCustomCell<T: UITableViewCell>(_: T.Type, indexPath: IndexPath) -> T {
-        let cell = self.dequeueReusableCell(withIdentifier: T.identifier, for: indexPath)
+    func dequeueCustomCell<T: UITableViewCell>(_: T.Type) -> T {
+        let cell = self.dequeueReusableCell(withIdentifier: T.identifier)
         
         return cell as! T
     }

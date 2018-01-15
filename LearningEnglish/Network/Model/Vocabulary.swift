@@ -7,23 +7,28 @@
 //
 
 import ObjectMapper
+import RealmSwift
 
-class Vocabulary: Mappable {
-    var stt: Int?
-    var english: String?
-    var vnRaw: String?
-    var example: String?
-    var vietnamese: String?
-    var idUnit: String?
-    var thumbUrl: String?
-    var voice: String?
+class Vocabulary: Object, Mappable {
+   @objc dynamic var num: Int = 0
+   @objc dynamic var english: String?
+   @objc dynamic var vnRaw: String?
+   @objc dynamic var example: String?
+   @objc dynamic var vietnamese: String?
+   @objc dynamic var idUnit: String?
+   @objc dynamic var thumbUrl: String?
+   @objc dynamic var voice: String?
     
-    required init?(map: Map) {
-        
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    override static func primaryKey() -> String? {
+        return "num"
     }
     
     func mapping(map: Map) {
-        stt <- map["stt"]
+        num <- map["stt"]
         english <- map["english"]
         vnRaw <- map["vnRaw"]
         example <- map["example"]

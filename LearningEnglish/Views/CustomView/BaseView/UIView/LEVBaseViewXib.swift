@@ -1,5 +1,5 @@
 //
-//  KBaseViewXib.swift
+//  LEVBaseViewXib.swift
 //  CodeBaseNetWork
 //
 //  Created by Kai Pham on 12/28/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KBaseViewXib: UIView {
+class LEVBaseViewXib: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib()

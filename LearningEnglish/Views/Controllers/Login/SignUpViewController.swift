@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpViewController: KBaseViewController {
+class SignUpViewController: LEVBaseViewController {
     @IBOutlet weak var tfEmail: LEVTextField!
     @IBOutlet weak var tfPassword: LEVTextField!
     @IBOutlet weak var tfRetypePassword: LEVTextField!

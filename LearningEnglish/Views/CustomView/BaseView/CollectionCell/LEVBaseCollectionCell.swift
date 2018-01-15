@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KBaseCollectionCell: UICollectionViewCell {
+class LEVBaseCollectionCell: UICollectionViewCell {
     let lineBottom: UIView = {
         let lineView = UIView()
         lineView.backgroundColor = UIColor.black.withAlphaComponent(0.1)

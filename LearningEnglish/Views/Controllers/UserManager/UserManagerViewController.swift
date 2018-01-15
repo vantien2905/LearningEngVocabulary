@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserManagerViewController: KBaseViewController {
+class UserManagerViewController: LEVBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,6 @@ class UserManagerViewController: KBaseViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation

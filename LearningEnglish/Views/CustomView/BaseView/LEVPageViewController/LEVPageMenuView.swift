@@ -1,5 +1,5 @@
 //
-//  KPageMenuView.swift
+//  LEVPageMenuView.swift
 //  CodeBaseNetWork
 //
 //  Created by Kai Pham on 12/28/17.
@@ -12,7 +12,7 @@ protocol KPageMenuViewDelegate: class {
     func itemMenuSelected(index: Int)
 }
 
-class KPageMenuView: UIView {
+class LEVPageMenuView: UIView {
     let cvMenu: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
@@ -84,7 +84,7 @@ class KPageMenuView: UIView {
 }
 
 // MARK: handle Collection view
-extension KPageMenuView: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+extension LEVPageMenuView: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func configureCollection() {
         cvMenu.register(KPageMenuViewCell.self, forCellWithReuseIdentifier: cellId)
         cvMenu.delegate = self
