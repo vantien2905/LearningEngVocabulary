@@ -8,7 +8,8 @@
 
 import UIKit
 
-class BookTableViewCell: LEVBaseTableCellXib {
+
+class ListUnitTableViewCell: LEVBaseTableCellXib {
     
     @IBOutlet weak var imgUnit: UIImageView!
     @IBOutlet weak var lbUnitName: UILabel!

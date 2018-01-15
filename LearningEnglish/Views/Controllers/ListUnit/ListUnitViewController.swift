@@ -41,7 +41,7 @@ class ListUnitViewController: LEVBaseViewController {
         vmListUnit.getAllUnit()
         
         vmListUnit.outputs.listUnit.asObservable().bind(to: tbBook.rx.items) { table, _, unit in
-            let cell = table.dequeueCustomCell(BookTableViewCell.self)
+            let cell = table.dequeueCustomCell(ListUnitTableViewCell.self)
             cell.bindData(data: unit)
             return cell
         }.disposed(by: bag)
@@ -51,7 +51,7 @@ class ListUnitViewController: LEVBaseViewController {
 // MARK: handle Table
 extension ListUnitViewController: UITableViewDelegate {
     func configureTable() {
-        tbBook.registerCustomCell(BookTableViewCell.self, fromNib: true)
+        tbBook.registerCustomCell(ListUnitTableViewCell.self, fromNib: true)
         tbBook.delegate = self
     }
     

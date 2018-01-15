@@ -77,8 +77,8 @@
 		FD1B0F611FAECE3300B9321D /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD1B0F5F1FAECE3300B9321D /* SignUpViewController.xib */; };
 		FD79B10D1FD38E5000D533FC /* ListUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD79B10B1FD38E5000D533FC /* ListUnitViewController.swift */; };
 		FD79B10E1FD38E5000D533FC /* ListUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD79B10C1FD38E5000D533FC /* ListUnitViewController.xib */; };
-		FD79B1121FD38EA900D533FC /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD79B1101FD38EA900D533FC /* BookTableViewCell.swift */; };
-		FD79B1131FD38EA900D533FC /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD79B1111FD38EA900D533FC /* BookTableViewCell.xib */; };
+		FD79B1121FD38EA900D533FC /* ListUnitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD79B1101FD38EA900D533FC /* ListUnitTableViewCell.swift */; };
+		FD79B1131FD38EA900D533FC /* ListUnitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD79B1111FD38EA900D533FC /* ListUnitTableViewCell.xib */; };
 		FD79B1171FD394F700D533FC /* UnitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD79B1151FD394F700D533FC /* UnitDetailViewController.swift */; };
 		FD79B1181FD394F700D533FC /* UnitDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD79B1161FD394F700D533FC /* UnitDetailViewController.xib */; };
 		FD79B11C1FD3985400D533FC /* UnitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD79B11A1FD3985400D533FC /* UnitTableViewCell.swift */; };
@@ -168,8 +168,8 @@
 		FD1B0F5F1FAECE3300B9321D /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		FD79B10B1FD38E5000D533FC /* ListUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUnitViewController.swift; sourceTree = "<group>"; };
 		FD79B10C1FD38E5000D533FC /* ListUnitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListUnitViewController.xib; sourceTree = "<group>"; };
-		FD79B1101FD38EA900D533FC /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
-		FD79B1111FD38EA900D533FC /* BookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
+		FD79B1101FD38EA900D533FC /* ListUnitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUnitTableViewCell.swift; sourceTree = "<group>"; };
+		FD79B1111FD38EA900D533FC /* ListUnitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListUnitTableViewCell.xib; sourceTree = "<group>"; };
 		FD79B1151FD394F700D533FC /* UnitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDetailViewController.swift; sourceTree = "<group>"; };
 		FD79B1161FD394F700D533FC /* UnitDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnitDetailViewController.xib; sourceTree = "<group>"; };
 		FD79B11A1FD3985400D533FC /* UnitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTableViewCell.swift; sourceTree = "<group>"; };
@@ -503,13 +503,13 @@
 			path = ListUnit;
 			sourceTree = "<group>";
 		};
-		FD79B10F1FD38E8500D533FC /* BookTableViewCell */ = {
+		FD79B10F1FD38E8500D533FC /* ListUnitTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				FD79B1101FD38EA900D533FC /* BookTableViewCell.swift */,
-				FD79B1111FD38EA900D533FC /* BookTableViewCell.xib */,
+				FD79B1101FD38EA900D533FC /* ListUnitTableViewCell.swift */,
+				FD79B1111FD38EA900D533FC /* ListUnitTableViewCell.xib */,
 			);
-			path = BookTableViewCell;
+			path = ListUnitTableViewCell;
 			sourceTree = "<group>";
 		};
 		FD79B1141FD394C700D533FC /* Unit */ = {
@@ -632,7 +632,7 @@
 			isa = PBXGroup;
 			children = (
 				FD79B1191FD3982900D533FC /* UnitTableViewCell */,
-				FD79B10F1FD38E8500D533FC /* BookTableViewCell */,
+				FD79B10F1FD38E8500D533FC /* ListUnitTableViewCell */,
 				DEE914731FAF031B00FA9B63 /* Base */,
 			);
 			path = Cells;
@@ -734,7 +734,7 @@
 				FD79B11D1FD3985400D533FC /* UnitTableViewCell.xib in Resources */,
 				FDCC28AB1FA07A5B009728F1 /* StartAppViewController.xib in Resources */,
 				FDCC28901FA075B2009728F1 /* Assets.xcassets in Resources */,
-				FD79B1131FD38EA900D533FC /* BookTableViewCell.xib in Resources */,
+				FD79B1131FD38EA900D533FC /* ListUnitTableViewCell.xib in Resources */,
 				DE527E6C2000B33200D598DF /* UserManagerViewController.xib in Resources */,
 				FD79B1181FD394F700D533FC /* UnitDetailViewController.xib in Resources */,
 				FD79B10E1FD38E5000D533FC /* ListUnitViewController.xib in Resources */,
@@ -875,7 +875,7 @@
 				DE527E5220008DD500D598DF /* WordBookViewController.swift in Sources */,
 				DE5BA2341FFFC84A0002E12B /* LEVBaseCollectionCellXib.swift in Sources */,
 				DE5BA21C1FFFC75E0002E12B /* UIScreen+extension.swift in Sources */,
-				FD79B1121FD38EA900D533FC /* BookTableViewCell.swift in Sources */,
+				FD79B1121FD38EA900D533FC /* ListUnitTableViewCell.swift in Sources */,
 				172E7464200517F500853D41 /* ListUnitViewModel.swift in Sources */,
 				DE527E662000B2E000D598DF /* SettingsViewController.swift in Sources */,
 				DEE914791FAF080F00FA9B63 /* UIViewX.swift in Sources */,
