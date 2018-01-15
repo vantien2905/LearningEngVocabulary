@@ -8,6 +8,9 @@
 
 import Foundation
 import UIKit
+
+// MARK: LEVColor
+
 struct LEVColor {
     static let whiteColor = UIColor.white
     static let blackColor = UIColor.black
@@ -19,20 +22,9 @@ struct LEVColor {
     
     static let buttonGreen = UIColor.hexStringToUIColor(hex: "39b54a")
     static let titleGreen = UIColor.hexStringToUIColor(hex: "1d9571")
-    
-//    struct  ColorGlobal {
-//        static let titleGreen = UIColor(hex: "1d9571")
-//        static let buttonGreen =  UIColor(hex: "39b54a")
-//        static let backGround =  UIColor(hex: "f9f9f9")
-//        static let foreGround =  UIColor(hex: "ffffff")
-//        static let paragraphText =  UIColor(hex: "000000")
-//        static let smallTitle =  UIColor(hex: "6e6e6e")
-//        static let background241 =  UIColor(hex: "f1f1f1")
-//        static let backgroundGray = UIColor.blackColor().colorWithAlphaComponent(0.1)
-//        static let notificationRead = UIColor(hex: "f1f1f1")
-//        static let buttonGray = UIColor(hex: "b8b8b8")
-//    }
 }
+
+// MARK: LEVFont
 
 struct LEVFont {
     
@@ -56,12 +48,19 @@ struct LEVFont {
     static let fontBold17 = UIFont.monospacedDigitSystemFont(ofSize: 17.5, weight: .bold)
 }
 
+// MARK: LEVImage
+
 struct LEVImage {
+    // Tabbar Icon
     static let imgBookTabbar = UIImage(named: "feeds")!.withRenderingMode(.alwaysOriginal)
     static let imgBookTabbarActive = UIImage(named: "feeds_active")!.withRenderingMode(.alwaysOriginal)
     static let imgSetting = UIImage(named: "settings")!.withRenderingMode(.alwaysOriginal)
     static let imgSettingActive = UIImage(named: "settings_active")!.withRenderingMode(.alwaysOriginal)
     static let imgUserTabbar = UIImage(named: "profile")!.withRenderingMode(.alwaysOriginal)
     static let imgUserTabbarActive = UIImage(named: "profile_active")!.withRenderingMode(.alwaysOriginal)
-    static let imgUnitDefault = UIImage(named: "UnitDefault")!.withRenderingMode(.alwaysOriginal)
+    
+    //
+    static let imgBack = UIImage(named: "back")!
+    static let imgUnitDefault = UIImage(named: "UnitDefault")!
+    static let imgWordbookDefault = UIImage(named: "book")!
 }

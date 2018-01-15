@@ -10,10 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class ListUnitViewController: LEVBaseViewController {
 
+class ListUnitViewController: LEVBaseViewController {
     @IBOutlet weak var tbBook: UITableView!
-    let cellId = "BookTableViewCell"
     
     var idWordBook: String?
     
@@ -29,6 +28,7 @@ class ListUnitViewController: LEVBaseViewController {
     override func setUpNavigation() {
         super.setUpNavigation()
         setTitle(title: "600 Essential English Words")
+        addBackToNavigation()
     }
     
    static func configureController(idWordbook: String?) -> ListUnitViewController {
@@ -38,7 +38,6 @@ class ListUnitViewController: LEVBaseViewController {
     }
     
     private func vmBindToVC() {
-        showError(message: "day la message")
         vmListUnit.getAllUnit()
         
         vmListUnit.outputs.listUnit.asObservable().bind(to: tbBook.rx.items) { table, _, unit in

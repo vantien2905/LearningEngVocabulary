@@ -18,10 +18,12 @@ class WorkBookCell: LEVBaseCollectionCellXib {
         didSet {
             guard let wb = wordBook else { return }
             lbName.text = wb.nameWordBook
-            if let strImage = wb.urlWordBook, let url = URL(string: strImage) {
-                imgIcon.sd_setImage(with: url, placeholderImage: nil)
-            }
             
+            if let urlLocalStr = wb.urlImageLocal, let url = URL(string: urlLocalStr) {
+                imgIcon.sd_setImage(with: url, placeholderImage: LEVImage.imgWordbookDefault)
+            } else if let strImage = wb.urlWordBook, let url = URL(string: strImage) {
+                imgIcon.sd_setImage(with: url, placeholderImage: LEVImage.imgWordbookDefault)
+            }
         }
     }
     
