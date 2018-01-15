@@ -65,14 +65,16 @@ class DownLoadHelper {
                         }
                     }
                     .responseData { dataResponse in
-                        do {
-                            if let data = dataResponse.data {
-                                print(fileUrl)
-                                try data.write(to: fileUrl, options: .atomic)
+                        if dataResponse.response?.statusCode ==  200 {
+                            do {
+                                if let data = dataResponse.data {
+                                    print(fileUrl)
+                                    try data.write(to: fileUrl, options: .atomic)
+                                }
+                            } catch {
+                                print("error when save file \(name).\(fileType.rawValue)")
+                                observer.onCompleted()
                             }
-                        } catch {
-                            print("error when save file \(name).\(fileType.rawValue)")
-                            observer.onCompleted()
                         }
                 }
             }
