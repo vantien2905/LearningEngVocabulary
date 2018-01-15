@@ -19,6 +19,8 @@ class Vocabulary: Object, Mappable {
    @objc dynamic var thumbUrl: String?
    @objc dynamic var voice: String?
     
+    @objc dynamic var thumbUrlLocal: String?
+    
     required convenience init?(map: Map) {
         self.init()
     }
@@ -37,4 +39,17 @@ class Vocabulary: Object, Mappable {
         thumbUrl <- map["thumbUrl"]
         voice <- map["voice"]
     }
+    
+    convenience init(num: Int, english: String?, vnRaw: String?, example: String?, vietnamese: String?, idUnit: String?, thumbUrl: String?, voice: String?) {
+        self.init()
+        self.num = num
+        self.english = english
+        self.vnRaw = vnRaw
+        self.example = example
+        self.vietnamese = vietnamese
+        self.idUnit = idUnit
+        self.thumbUrl = thumbUrl
+        self.voice = voice
+    }
+    
 }

@@ -52,7 +52,6 @@ extension WordBookViewModel {
                 
                 return newWb
             }
-            
             self.outputs.listWordBook.value = wbToShow
         }
         
