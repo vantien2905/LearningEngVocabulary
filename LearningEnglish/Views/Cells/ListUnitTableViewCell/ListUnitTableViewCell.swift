@@ -13,7 +13,7 @@ class ListUnitTableViewCell: LEVBaseTableCellXib {
     @IBOutlet weak var imgUnit: UIImageView!
     @IBOutlet weak var lbUnitName: UILabel!
     @IBOutlet weak var vPercentScore: LEVPercentView!
-
+    @IBOutlet weak var lbScore: UILabel!
     override func setUpViews() {
         super.setUpViews()
         lineBottom.isHidden = false
@@ -25,6 +25,8 @@ class ListUnitTableViewCell: LEVBaseTableCellXib {
             self.imgUnit.sd_setImage(with: url, placeholderImage: LEVImage.imgUnitDefault)
         }
         self.lbUnitName.text = data.nameUnit
+        self.lbScore.text = " \(data.score.value*)/100 "
+        
     }
     
 }

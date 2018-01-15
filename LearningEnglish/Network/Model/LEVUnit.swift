@@ -32,8 +32,9 @@ class LEVUnit: Object, Mappable {
         self.idUnit <- map["idUnit"]
         self.idWordBook <- map["idWordBook"]
         self.nameUnit <- map["nameUnit"]
-        self.score <- map["score"]
+        self.score.value <- map["score"]
         self.urlUnit <- map["urlUnit"]
+        
     }
     
     // init to get image offline

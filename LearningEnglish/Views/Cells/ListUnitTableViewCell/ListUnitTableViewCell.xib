@@ -87,6 +87,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="imgUnit" destination="M3f-Zm-Rtr" id="VMg-g5-VRg"/>
+                <outlet property="lbScore" destination="uBd-E0-Dvt" id="ASa-F3-vHf"/>
                 <outlet property="lbUnitName" destination="HZh-9J-fQV" id="Bva-0g-pbU"/>
                 <outlet property="vPercentScore" destination="1pn-O4-Hak" id="h1o-xY-TFO"/>
             </connections>

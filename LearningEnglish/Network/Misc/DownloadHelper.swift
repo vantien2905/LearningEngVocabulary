@@ -68,13 +68,14 @@ class DownLoadHelper {
                         if dataResponse.response?.statusCode ==  200 {
                             do {
                                 if let data = dataResponse.data {
-                                    print(fileUrl)
                                     try data.write(to: fileUrl, options: .atomic)
                                 }
                             } catch {
                                 print("error when save file \(name).\(fileType.rawValue)")
                                 observer.onCompleted()
                             }
+                        } else {
+                            observer.onCompleted()
                         }
                 }
             }
