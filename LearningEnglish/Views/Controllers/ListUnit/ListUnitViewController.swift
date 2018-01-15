@@ -10,7 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-
 class ListUnitViewController: LEVBaseViewController {
     @IBOutlet weak var tbBook: UITableView!
     

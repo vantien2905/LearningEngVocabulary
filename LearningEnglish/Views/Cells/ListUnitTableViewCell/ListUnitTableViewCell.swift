@@ -8,11 +8,11 @@
 
 import UIKit
 
-
 class ListUnitTableViewCell: LEVBaseTableCellXib {
     
     @IBOutlet weak var imgUnit: UIImageView!
     @IBOutlet weak var lbUnitName: UILabel!
+    @IBOutlet weak var vPercentScore: LEVPercentView!
 
     override func setUpViews() {
         super.setUpViews()

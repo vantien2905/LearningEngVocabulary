@@ -51,15 +51,15 @@
                         <color key="textColor" red="0.66802300347222221" green="0.615966796875" blue="0.14029947916666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pn-O4-Hak">
-                        <rect key="frame" x="164" y="70" width="182" height="10"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1pn-O4-Hak" customClass="LEVPercentView" customModule="Learning_English_Vocabulary" customModuleProvider="target">
+                        <rect key="frame" x="164" y="70" width="173" height="10"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="10" id="hlb-RG-Vbe"/>
                         </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download_blue" translatesAutoresizingMaskIntoConstraints="NO" id="f2D-sf-7CM">
-                        <rect key="frame" x="351" y="65.5" width="20" height="20"/>
+                        <rect key="frame" x="342" y="65.5" width="20" height="20"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="Uxo-1V-f2M"/>
@@ -72,7 +72,7 @@
                     <constraint firstItem="f2D-sf-7CM" firstAttribute="leading" secondItem="1pn-O4-Hak" secondAttribute="trailing" constant="5" id="Grp-Ia-Eff"/>
                     <constraint firstItem="HZh-9J-fQV" firstAttribute="leading" secondItem="M3f-Zm-Rtr" secondAttribute="trailing" constant="10" id="I1m-p2-lhs"/>
                     <constraint firstAttribute="bottom" secondItem="M3f-Zm-Rtr" secondAttribute="bottom" constant="8" id="JbV-yS-t9S"/>
-                    <constraint firstAttribute="trailing" secondItem="f2D-sf-7CM" secondAttribute="trailing" constant="6" id="M1A-fG-M2K"/>
+                    <constraint firstAttribute="trailing" secondItem="f2D-sf-7CM" secondAttribute="trailing" constant="15" id="M1A-fG-M2K"/>
                     <constraint firstAttribute="bottom" secondItem="f2D-sf-7CM" secondAttribute="bottom" constant="6" id="NBF-64-qE3"/>
                     <constraint firstItem="uBd-E0-Dvt" firstAttribute="leading" secondItem="VSn-hE-I70" secondAttribute="trailing" constant="5" id="PyX-oQ-F1n"/>
                     <constraint firstItem="M3f-Zm-Rtr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="SS1-O7-Zz4"/>
@@ -88,6 +88,7 @@
             <connections>
                 <outlet property="imgUnit" destination="M3f-Zm-Rtr" id="VMg-g5-VRg"/>
                 <outlet property="lbUnitName" destination="HZh-9J-fQV" id="Bva-0g-pbU"/>
+                <outlet property="vPercentScore" destination="1pn-O4-Hak" id="h1o-xY-TFO"/>
             </connections>
             <point key="canvasLocation" x="62.5" y="37"/>
         </tableViewCell>
