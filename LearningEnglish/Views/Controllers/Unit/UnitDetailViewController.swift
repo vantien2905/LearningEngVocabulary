@@ -45,11 +45,7 @@ class UnitDetailViewController: LEVBaseViewController {
     override func setUpNavigation() {
         super.setUpNavigation()
         setTitle(title: "Unit1: Contacts")
-        self.addButtonTextToNavigation(title: "Back", textColor: .white, font: LEVFont.fontBold17, style: .left, action: #selector(btnBackTapped))
-    }
-    
-    @objc func btnBackTapped() {
-        self.pop()
+        
     }
     
     func configureTable() {

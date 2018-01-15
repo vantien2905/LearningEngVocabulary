@@ -169,7 +169,7 @@ class LEVBaseViewController: UIViewController {
     }
 }
 
-extension KBaseViewController {
+extension LEVBaseViewController {
     func addBackToNavigation() {
         addButtonImageToNavigation(image: LEVImage.imgBack, style: .left, action: #selector(btnBackTapped))
     }
