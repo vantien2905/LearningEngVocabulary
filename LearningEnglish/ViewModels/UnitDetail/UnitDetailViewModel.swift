@@ -29,6 +29,13 @@ class UnitDetailViewModel {
     
     func getListVocabularyOffline() {
         let listVocabulary = KRealmHelper.shared.dbObjects(Vocabulary.self).toArray(ofType: Vocabulary.self)
+        if !listVocabulary.isEmpty {
+            let vocabularyToShow = listVocabulary.map { unit -> Vocabulary in
+                let vocabulary = Vocabulary(num: unit.num, english: unit.english, vnRaw: unit.vnRaw, example: unit.example, vietnamese: unit.vietnamese, idUnit: unit.idUnit, thumbUrl: unit.thumbUrl, voice: unit.voice)
+                return vocabulary
+            }
+            self.outputs.listVocabulary.value = vocabularyToShow
+        }
     }
     
     func getListVocabularyOnline() {

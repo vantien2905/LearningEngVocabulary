@@ -13,14 +13,10 @@ class UnitDetailViewController: LEVBaseViewController {
     @IBOutlet weak var btnGame: UIButton!
     @IBOutlet weak var btnPractice: UIButton!
     @IBOutlet weak var btnTranslate: UIButton!
-    
     @IBOutlet weak var tbUnit: UITableView!
+    
     let vmUnitDetail = UnitDetailViewModel()
     let disposeBag = DisposeBag()
-
-    let cellId = "UnitTableViewCell"
-    let cellPracticeId = "UnitPracticeTableViewCell"
-    
     var listVocabulary = [Vocabulary]() {
         didSet {
             tbUnit.reloadData()
@@ -34,7 +30,6 @@ class UnitDetailViewController: LEVBaseViewController {
     }
     
     override func setUpViews() {
-        
         btnGame.layer.cornerRadius = 5
         btnPractice.layer.cornerRadius = 5
         btnTranslate.layer.cornerRadius = 5
@@ -45,14 +40,13 @@ class UnitDetailViewController: LEVBaseViewController {
     override func setUpNavigation() {
         super.setUpNavigation()
         setTitle(title: "Unit1: Contacts")
+        addBackToNavigation()
         
     }
     
     func configureTable() {
-        let nib = UINib(nibName: cellId, bundle: nil)
-        tbUnit.register(nib, forCellReuseIdentifier: cellId)
-        let practiceNib = UINib(nibName: cellPracticeId, bundle: nil)
-        tbUnit.register(practiceNib, forCellReuseIdentifier: cellPracticeId)
+        tbUnit.registerCustomCell(UnitTableViewCell.self, fromNib: true)
+        tbUnit.registerCustomCell(UnitPracticeTableViewCell.self, fromNib: true)
         tbUnit.dataSource = self
         tbUnit.delegate = self
     }
@@ -61,6 +55,8 @@ class UnitDetailViewController: LEVBaseViewController {
         vmUnitDetail.outputs.listVocabulary.asObservable().subscribe(onNext: { _listVocabulary in
             self.listVocabulary = _listVocabulary
         }).disposed(by: disposeBag)
+        
+        
     }
 
 }
@@ -68,11 +64,11 @@ class UnitDetailViewController: LEVBaseViewController {
 extension UnitDetailViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.item == 20 {
-            let cell = tbUnit.dequeueReusableCell(withIdentifier: cellPracticeId, for: indexPath)
+            let cell = tbUnit.dequeueCustomCell(UnitPracticeTableViewCell.self)
             
             return cell
         } else {
-            let cell = tbUnit.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UnitTableViewCell
+            let cell = tbUnit.dequeueCustomCell(UnitTableViewCell.self)
             if self.listVocabulary.count != 0 {
                 cell.vocabulary = self.listVocabulary[indexPath.row]
             }
