@@ -702,7 +702,7 @@
 				TargetAttributes = {
 					FDCC28841FA075B2009728F1 = {
 						CreatedOnToolsVersion = 9.0.1;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -989,19 +989,21 @@
 			baseConfigurationReference = BC724E86A9F9BC8A97BA0F13 /* Pods-LearningEnglish.appstore.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = KGRXCGAUA5;
+				CODE_SIGN_IDENTITY = "iPhone Developer: felix@vinova.sg (FX9P8DR46H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: felix@vinova.sg (FX9P8DR46H)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RY67X28Z6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LearningEnglish/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kai.com.learningenglish;
 				PRODUCT_NAME = "Learning English Vocabulary";
-				PROVISIONING_PROFILE = "f8944ce4-a389-4cd8-bd2c-b420774d6ef0";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore kai.com.learningenglish";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1119,18 +1121,21 @@
 			baseConfigurationReference = B7C2282A506E4C5F71A94DF3 /* Pods-LearningEnglish.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = KGRXCGAUA5;
+				CODE_SIGN_IDENTITY = "iPhone Developer: felix@vinova.sg (FX9P8DR46H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: felix@vinova.sg (FX9P8DR46H)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RY67X28Z6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LearningEnglish/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kai.com.learningenglish;
 				PRODUCT_NAME = "Learning English Vocabulary Dev";
-				PROVISIONING_PROFILE = "837b5644-189c-4e0c-9ecc-a52476c54d26";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development kai.com.learningenglish";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1141,19 +1146,21 @@
 			baseConfigurationReference = F76C6920FA06C5880C044AFC /* Pods-LearningEnglish.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = KGRXCGAUA5;
+				CODE_SIGN_IDENTITY = "iPhone Developer: felix@vinova.sg (FX9P8DR46H)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: felix@vinova.sg (FX9P8DR46H)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9RY67X28Z6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LearningEnglish/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kai.com.learningenglish;
 				PRODUCT_NAME = "Learning English Vocabulary Dev";
-				PROVISIONING_PROFILE = "837b5644-189c-4e0c-9ecc-a52476c54d26";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development kai.com.learningenglish";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

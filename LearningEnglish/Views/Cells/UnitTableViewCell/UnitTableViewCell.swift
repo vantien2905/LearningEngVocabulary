@@ -9,14 +9,13 @@
 import UIKit
 import SDWebImage
 
-class UnitTableViewCell: UITableViewCell {
+class UnitTableViewCell: LEVBaseTableCellXib {
     
     @IBOutlet weak var imgWord: UIImageView!
-    @IBOutlet weak var lbWord: UILabel!
-    @IBOutlet weak var lbVnRaw: UILabel!
-    @IBOutlet weak var lbVietnameseWord: UILabel!
-    @IBOutlet weak var lbExample: UILabel!
-    @IBOutlet weak var lbViewnameseExample: UILabel!
+    @IBOutlet weak var lbWord: LEVLabel!
+    @IBOutlet weak var lbVnRaw: LEVLabel!
+    @IBOutlet weak var lbVietnameseWord: LEVLabel!
+    @IBOutlet weak var lbExample: LEVLabel!
     
     var vocabulary: Vocabulary? {
         didSet {
@@ -37,6 +36,30 @@ class UnitTableViewCell: UITableViewCell {
         guard let _thumbUrl = _vocabulary.thumbUrl else {return}
         let url = URL(string: _thumbUrl)
         imgWord.sd_setImage(with: url, placeholderImage: LEVImage.imgSetting)
-        
+        lbWord.textColor = LEVColor.titleGreen
     }
+    
+}
+
+class LEVLabel: UILabel {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setUpView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setUpView()
+    }
+    
+    func setUpView() {
+        self.textColor = LEVColor.blackColor
+    }
+    
+    func setContent(title: String, colorText: UIColor = LEVColor.blackColor,  font: UIFont = LEVFont.fontRegular15) {
+        self.text = title
+        self.font = font
+        self.textColor = colorText
+    }
+    
 }

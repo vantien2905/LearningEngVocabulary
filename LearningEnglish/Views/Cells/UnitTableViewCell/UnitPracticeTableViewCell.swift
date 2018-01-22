@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UnitPracticeTableViewCell: UITableViewCell {
+class UnitPracticeTableViewCell: LEVBaseTableCellXib {
     @IBOutlet weak var vBackground: UIView!
 
     override func awakeFromNib() {

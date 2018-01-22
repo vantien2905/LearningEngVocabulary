@@ -14,6 +14,9 @@ class UnitDetailViewController: LEVBaseViewController {
     @IBOutlet weak var btnPractice: UIButton!
     @IBOutlet weak var btnTranslate: UIButton!
     @IBOutlet weak var tbUnit: UITableView!
+    @IBOutlet weak var vContentTop: UIView!
+    @IBOutlet weak var heighVContent: NSLayoutConstraint!
+    @IBOutlet weak var lbVocabulary: UILabel!
     
     let vmUnitDetail = UnitDetailViewModel()
     let disposeBag = DisposeBag()
@@ -25,16 +28,16 @@ class UnitDetailViewController: LEVBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTable()
         bindData()
+        configureTable()
     }
     
     override func setUpViews() {
-        btnGame.layer.cornerRadius = 5
-        btnPractice.layer.cornerRadius = 5
-        btnTranslate.layer.cornerRadius = 5
-        btnTranslate.layer.borderWidth = 1
-        btnTranslate.layer.borderColor = UIColor.black.withAlphaComponent(0.5).cgColor
+        btnGame.setBorder(cornerRadius: 5)
+        btnPractice.setBorder(cornerRadius: 5)
+        btnTranslate.setBorder(borderWidth: 1, borderColor: LEVColor.buttonGreen, cornerRadius: 5)
+        btnTranslate.setTitleColor(LEVColor.buttonGreen, for: .normal)
+        lbVocabulary.textColor = LEVColor.titleGreen
     }
     
     override func setUpNavigation() {
@@ -55,8 +58,6 @@ class UnitDetailViewController: LEVBaseViewController {
         vmUnitDetail.outputs.listVocabulary.asObservable().subscribe(onNext: { _listVocabulary in
             self.listVocabulary = _listVocabulary
         }).disposed(by: disposeBag)
-        
-        
     }
 
 }
@@ -85,6 +86,22 @@ extension UnitDetailViewController: UITableViewDataSource, UITableViewDelegate {
             return 250
         } else {
             return 200
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let actualPosition = scrollView.panGestureRecognizer.translation(in: scrollView.superview)
+        self.view.layoutIfNeeded()
+        if actualPosition.y > 0 {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.heighVContent.constant = 100
+                self.view.layoutIfNeeded()
+            })
+        } else {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.heighVContent.constant = 0
+               self.view.layoutIfNeeded()
+            })
         }
     }
 }
