@@ -44,6 +44,11 @@ class UnitDetailViewController: LEVBaseViewController {
         
     }
     
+    @IBAction func btnGameTapped() {
+        let vc = PracticeFirstGameVC.initFromNib()
+        self.push(controller: vc, animated: true)
+    }
+    
     func configureTable() {
         tbUnit.registerCustomCell(UnitTableViewCell.self, fromNib: true)
         tbUnit.registerCustomCell(UnitPracticeTableViewCell.self, fromNib: true)
@@ -55,7 +60,6 @@ class UnitDetailViewController: LEVBaseViewController {
         vmUnitDetail.outputs.listVocabulary.asObservable().subscribe(onNext: { _listVocabulary in
             self.listVocabulary = _listVocabulary
         }).disposed(by: disposeBag)
-        
         
     }
 
