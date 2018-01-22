@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		17106C1C2007A52A0038C79E /* KBaseViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17106C1B2007A52A0038C79E /* KBaseViewController+extension.swift */; };
 		17106C1E2007A68A0038C79E /* LEVConstantMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17106C1D2007A68A0038C79E /* LEVConstantMessage.swift */; };
+		17287018201629BC00BD6DAF /* PracticeFirstGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17287017201629BC00BD6DAF /* PracticeFirstGameVC.swift */; };
+		1728701A201629EC00BD6DAF /* PracticeFirstGameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17287019201629EC00BD6DAF /* PracticeFirstGameVC.xib */; };
+		1728701E20162E5500BD6DAF /* PracticeGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728701C20162E5500BD6DAF /* PracticeGameCell.swift */; };
+		1728701F20162E5500BD6DAF /* PracticeGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1728701D20162E5500BD6DAF /* PracticeGameCell.xib */; };
 		172E74602005131500853D41 /* APIListUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E745F2005131500853D41 /* APIListUnit.swift */; };
 		172E7464200517F500853D41 /* ListUnitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E7463200517F500853D41 /* ListUnitViewModel.swift */; };
 		172E7467200523E300853D41 /* LEVUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172E7466200523E300853D41 /* LEVUnit.swift */; };
@@ -97,6 +101,10 @@
 /* Begin PBXFileReference section */
 		17106C1B2007A52A0038C79E /* KBaseViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KBaseViewController+extension.swift"; sourceTree = "<group>"; };
 		17106C1D2007A68A0038C79E /* LEVConstantMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEVConstantMessage.swift; sourceTree = "<group>"; };
+		17287017201629BC00BD6DAF /* PracticeFirstGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeFirstGameVC.swift; sourceTree = "<group>"; };
+		17287019201629EC00BD6DAF /* PracticeFirstGameVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PracticeFirstGameVC.xib; sourceTree = "<group>"; };
+		1728701C20162E5500BD6DAF /* PracticeGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeGameCell.swift; sourceTree = "<group>"; };
+		1728701D20162E5500BD6DAF /* PracticeGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PracticeGameCell.xib; sourceTree = "<group>"; };
 		172E745F2005131500853D41 /* APIListUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIListUnit.swift; sourceTree = "<group>"; };
 		172E7463200517F500853D41 /* ListUnitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUnitViewModel.swift; sourceTree = "<group>"; };
 		172E7466200523E300853D41 /* LEVUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEVUnit.swift; sourceTree = "<group>"; };
@@ -201,6 +209,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		172870162016297100BD6DAF /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				17287017201629BC00BD6DAF /* PracticeFirstGameVC.swift */,
+				17287019201629EC00BD6DAF /* PracticeFirstGameVC.xib */,
+			);
+			path = Practice;
+			sourceTree = "<group>";
+		};
+		1728701B20162C6300BD6DAF /* PracticeGameCell */ = {
+			isa = PBXGroup;
+			children = (
+				1728701C20162E5500BD6DAF /* PracticeGameCell.swift */,
+				1728701D20162E5500BD6DAF /* PracticeGameCell.xib */,
+			);
+			path = PracticeGameCell;
+			sourceTree = "<group>";
+		};
 		172E745E200511FA00853D41 /* ListUnit */ = {
 			isa = PBXGroup;
 			children = (
@@ -631,6 +657,7 @@
 		FDCC28A51FA07724009728F1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1728701B20162C6300BD6DAF /* PracticeGameCell */,
 				FD79B1191FD3982900D533FC /* UnitTableViewCell */,
 				FD79B10F1FD38E8500D533FC /* ListUnitTableViewCell */,
 				DEE914731FAF031B00FA9B63 /* Base */,
@@ -641,6 +668,7 @@
 		FDCC28A61FA07733009728F1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				172870162016297100BD6DAF /* Practice */,
 				DE527E682000B31000D598DF /* UserManager */,
 				DE527E632000B29F00D598DF /* Settings */,
 				DE527E602000B20000D598DF /* Tabbar */,
@@ -736,8 +764,10 @@
 				FDCC28901FA075B2009728F1 /* Assets.xcassets in Resources */,
 				FD79B1131FD38EA900D533FC /* ListUnitTableViewCell.xib in Resources */,
 				DE527E6C2000B33200D598DF /* UserManagerViewController.xib in Resources */,
+				1728701A201629EC00BD6DAF /* PracticeFirstGameVC.xib in Resources */,
 				FD79B1181FD394F700D533FC /* UnitDetailViewController.xib in Resources */,
 				FD79B10E1FD38E5000D533FC /* ListUnitViewController.xib in Resources */,
+				1728701F20162E5500BD6DAF /* PracticeGameCell.xib in Resources */,
 				FD1B0F611FAECE3300B9321D /* SignUpViewController.xib in Resources */,
 				DE527E672000B2E000D598DF /* SettingsViewController.xib in Resources */,
 				FD79B1211FD3A4FF00D533FC /* UnitPracticeTableViewCell.xib in Resources */,
@@ -903,6 +933,7 @@
 				DE5BA2061FFFC6E80002E12B /* API.swift in Sources */,
 				FDCC28B01FA07E20009728F1 /* LEVConstant.swift in Sources */,
 				DE5BA21F1FFFC75E0002E12B /* UIImage+extension.swift in Sources */,
+				1728701E20162E5500BD6DAF /* PracticeGameCell.swift in Sources */,
 				DE5BA2211FFFC75E0002E12B /* Date+extension.swift in Sources */,
 				DE5BA2221FFFC75E0002E12B /* ObservableType+extension.swift in Sources */,
 				DE5BA2311FFFC84A0002E12B /* LEVBaseViewController.swift in Sources */,
@@ -915,6 +946,7 @@
 				FDCC28891FA075B2009728F1 /* AppDelegate.swift in Sources */,
 				DE5BA2361FFFC84A0002E12B /* LEVBaseTableCell.swift in Sources */,
 				DE5BA2041FFFC6E80002E12B /* APIUtilities.swift in Sources */,
+				17287018201629BC00BD6DAF /* PracticeFirstGameVC.swift in Sources */,
 				DE5BA2001FFFC6E80002E12B /* HTTPBody.swift in Sources */,
 				17106C1E2007A68A0038C79E /* LEVConstantMessage.swift in Sources */,
 			);

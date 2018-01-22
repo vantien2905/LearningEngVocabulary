@@ -41,7 +41,12 @@ extension ListUnitViewModel {
     
     private func getUnitOffline() {
         
-        let unitOffline = KRealmHelper.shared.dbObjects(LEVUnit.self).toArray(ofType: LEVUnit.self)
+        let unitOffline = KRealmHelper.shared.dbObjects(LEVUnit.self)
+            .toArray(ofType: LEVUnit.self)
+            .filter { unit -> Bool in
+                return unit.idWordBook == inputs.idWordBook
+        }
+    
         if !unitOffline.isEmpty {
             let unitToShow = unitOffline.map { unit -> LEVUnit in
                 let newUnit = LEVUnit(idUnit: unit.idUnit, idWordBook: unit.idWordBook, nameUnit: unit.nameUnit, urlUnit: unit.urlUnit, score: unit.score.value)
