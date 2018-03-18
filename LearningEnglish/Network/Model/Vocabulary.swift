@@ -50,6 +50,11 @@ class Vocabulary: Object, Mappable {
         self.idUnit = idUnit
         self.thumbUrl = thumbUrl
         self.voice = voice
+        
+        let urlImage = FileManagerHelper.shared.imagesFolder.appendingPathComponent("\(english&).jpg")
+        if FileManagerHelper.shared.checkExistFile(url: urlImage) {
+            thumbUrlLocal = urlImage.absoluteString
+        }
     }
     
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import AVFoundation
 
 class UnitTableViewCell: LEVBaseTableCellXib {
     
@@ -17,6 +18,13 @@ class UnitTableViewCell: LEVBaseTableCellXib {
     @IBOutlet weak var lbVietnameseWord: LEVLabel!
     @IBOutlet weak var lbExample: LEVLabel!
     
+    var player: AVAudioPlayer?
+    
+    @IBAction func btnSpeakerTapped() {
+        playSound()
+    }
+    
+    var isTranslate = true
     var vocabulary: Vocabulary? {
         didSet {
             setData()
@@ -25,9 +33,11 @@ class UnitTableViewCell: LEVBaseTableCellXib {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
     
     func setData() {
+        lbVietnameseWord.isHidden = !isTranslate
         guard let _vocabulary = vocabulary else {return}
         lbWord.text = _vocabulary.english
         lbVnRaw.text = _vocabulary.vnRaw
@@ -39,6 +49,29 @@ class UnitTableViewCell: LEVBaseTableCellXib {
         lbWord.textColor = LEVColor.titleGreen
     }
     
+    func playSound() {
+        guard let url = Bundle.main.url(forResource: "cungAnh", withExtension: "mp3") else { return }
+        
+//        guard let url = URL(string: "https://mp3.zing.vn/bai-hat/Nguoi-La-Oi-Karik-Orange-Superbrothers/ZW9A8ACC.html") else {return}
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+            /* iOS 10 and earlier require the following line:
+             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+
+            guard let player = player else { return }
+
+            player.play()
+
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }
 
 class LEVLabel: UILabel {

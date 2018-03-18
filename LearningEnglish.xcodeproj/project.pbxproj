@@ -20,6 +20,7 @@
 		B752D6162005128B00A3A2F3 /* APIUnitDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B752D6152005128B00A3A2F3 /* APIUnitDetail.swift */; };
 		B752D61920051E0600A3A2F3 /* UnitDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B752D61820051E0600A3A2F3 /* UnitDetailViewModel.swift */; };
 		B752D61B20051FBB00A3A2F3 /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B752D61A20051FBB00A3A2F3 /* Vocabulary.swift */; };
+		B7601141205E1F3900949381 /* cungAnh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B7601140205E1F3900949381 /* cungAnh.mp3 */; };
 		DE281DF520079E1F0092A536 /* DownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE281DF420079E1F0092A536 /* DownloadHelper.swift */; };
 		DE527E4C20008A1F00D598DF /* WordBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE527E4B20008A1F00D598DF /* WordBook.swift */; };
 		DE527E4E20008A9500D598DF /* APIWordBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE527E4D20008A9500D598DF /* APIWordBook.swift */; };
@@ -112,6 +113,7 @@
 		B752D6152005128B00A3A2F3 /* APIUnitDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUnitDetail.swift; sourceTree = "<group>"; };
 		B752D61820051E0600A3A2F3 /* UnitDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitDetailViewModel.swift; sourceTree = "<group>"; };
 		B752D61A20051FBB00A3A2F3 /* Vocabulary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vocabulary.swift; sourceTree = "<group>"; };
+		B7601140205E1F3900949381 /* cungAnh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cungAnh.mp3; sourceTree = "<group>"; };
 		B7C2282A506E4C5F71A94DF3 /* Pods-LearningEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningEnglish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish.debug.xcconfig"; sourceTree = "<group>"; };
 		BC724E86A9F9BC8A97BA0F13 /* Pods-LearningEnglish.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningEnglish.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-LearningEnglish/Pods-LearningEnglish.appstore.xcconfig"; sourceTree = "<group>"; };
 		DE281DF420079E1F0092A536 /* DownloadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadHelper.swift; sourceTree = "<group>"; };
@@ -269,6 +271,14 @@
 				B752D61820051E0600A3A2F3 /* UnitDetailViewModel.swift */,
 			);
 			path = UnitDetail;
+			sourceTree = "<group>";
+		};
+		B760113F205E1F1D00949381 /* Mp3 */ = {
+			isa = PBXGroup;
+			children = (
+				B7601140205E1F3900949381 /* cungAnh.mp3 */,
+			);
+			path = Mp3;
 			sourceTree = "<group>";
 		};
 		DE527E49200089DE00D598DF /* Wordbook */ = {
@@ -594,6 +604,7 @@
 		FDCC289C1FA07651009728F1 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				B760113F205E1F1D00949381 /* Mp3 */,
 				DEE65727200397630080F65E /* Helper */,
 				FDCC28A31FA076E0009728F1 /* Constant */,
 				FDCC28A21FA076D5009728F1 /* Extension */,
@@ -771,6 +782,7 @@
 				FD1B0F611FAECE3300B9321D /* SignUpViewController.xib in Resources */,
 				DE527E672000B2E000D598DF /* SettingsViewController.xib in Resources */,
 				FD79B1211FD3A4FF00D533FC /* UnitPracticeTableViewCell.xib in Resources */,
+				B7601141205E1F3900949381 /* cungAnh.mp3 in Resources */,
 				DE527E5320008DD500D598DF /* WordBookViewController.xib in Resources */,
 				FD1B0F4F1FAEABC400B9321D /* LogInViewController.xib in Resources */,
 			);

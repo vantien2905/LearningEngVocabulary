@@ -18,18 +18,28 @@ class UnitDetailViewController: LEVBaseViewController {
     @IBOutlet weak var heighVContent: NSLayoutConstraint!
     @IBOutlet weak var lbVocabulary: UILabel!
     
-    let vmUnitDetail = UnitDetailViewModel()
-    let disposeBag = DisposeBag()
-    var listVocabulary = [Vocabulary]() {
-        didSet {
-            tbUnit.reloadData()
-        }
+    private let vmUnitDetail = UnitDetailViewModel()
+    private let disposeBag = DisposeBag()
+    var isTranslate = true
+    @IBAction func btnTranslateTapped() {
+        isTranslate = !isTranslate
+        !isTranslate ? btnTranslate.setTitle("Don't translate", for: .normal) : btnTranslate.setTitle("Translate", for: .normal)
+        self.tbUnit.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bindData()
         configureTable()
+    }
+    
+    static func configureViewController (idUnit: String, listVocabulary: [Vocabulary]?) -> UnitDetailViewController {
+        let vc = UnitDetailViewController.initFromNib()
+        vc.vmUnitDetail.inputs.idListUnit.value = idUnit
+//        if let _listVocabulary = listVocabulary {
+//            vc.vmUnitDetail.outputs.listVocabulary.value = _listVocabulary
+//        }
+        return vc
     }
     
     override func setUpViews() {
@@ -55,44 +65,22 @@ class UnitDetailViewController: LEVBaseViewController {
     func configureTable() {
         tbUnit.registerCustomCell(UnitTableViewCell.self, fromNib: true)
         tbUnit.registerCustomCell(UnitPracticeTableViewCell.self, fromNib: true)
-        tbUnit.dataSource = self
         tbUnit.delegate = self
+        tbUnit.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
     }
     
     func bindData() {
-        vmUnitDetail.outputs.listVocabulary.asObservable().subscribe(onNext: { _listVocabulary in
-            self.listVocabulary = _listVocabulary
-        }).disposed(by: disposeBag)
+        vmUnitDetail.outputs.listVocabulary.asObservable().bind(to: self.tbUnit.rx.items) {table, _, data in
+            let cell = table.dequeueCustomCell(UnitTableViewCell.self)
+            cell.vocabulary = data
+            cell.isTranslate = self.isTranslate
+            return cell
+        }
     }
 }
 
-extension UnitDetailViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.item == 20 {
-            let cell = tbUnit.dequeueCustomCell(UnitPracticeTableViewCell.self)
-            
-            return cell
-        } else {
-            let cell = tbUnit.dequeueCustomCell(UnitTableViewCell.self)
-            if self.listVocabulary.count != 0 {
-                cell.vocabulary = self.listVocabulary[indexPath.row]
-            }
-            return cell
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listVocabulary.count + 1
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.item == 9 {
-            return 250
-        } else {
-            return 200
-        }
-    }
-    
+extension UnitDetailViewController: UITableViewDelegate {
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let actualPosition = scrollView.panGestureRecognizer.translation(in: scrollView.superview)
         self.view.layoutIfNeeded()

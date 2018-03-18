@@ -66,13 +66,19 @@ extension API {
                     let jsonStatus = json[APIKeyParam.status.rawValue]
                     let statusError = Mapper<StatusError>().map(JSONObject: jsonStatus.dictionaryObject)
                     
+                    guard let _statusError = statusError else {
+                        observer.onCompleted()
+                        
+                        return
+                    }
+                    
                     //---
-                    if statusError!.statusCode* >= 200 || statusError!.statusCode* < 300 {
+                    if _statusError.statusCode* >= 200 || _statusError.statusCode* < 300 {
                         let jsonData = json[APIKeyParam.data.rawValue]
                         observer.onNext(jsonData)
                         observer.onCompleted()
                     } else {
-                        observer.onError(ApiError.errorFromAPI(statusError: statusError))
+                        observer.onError(ApiError.errorFromAPI(statusError: _statusError))
                     }
                 }, onError: { error in
                     observer.onError(ApiError.requestFormatError(error))

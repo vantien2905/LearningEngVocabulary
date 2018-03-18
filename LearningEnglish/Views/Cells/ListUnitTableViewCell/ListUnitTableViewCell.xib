@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -66,6 +67,16 @@
                             <constraint firstAttribute="width" constant="20" id="hVy-iX-lp1"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PeK-Vf-KJu">
+                        <rect key="frame" x="332" y="55.5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="8WU-Vi-IuE"/>
+                            <constraint firstAttribute="width" constant="40" id="Gg2-k9-vYB"/>
+                        </constraints>
+                        <connections>
+                            <action selector="btnDownloadTapped" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Mfj-8t-UjS"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="uBd-E0-Dvt" firstAttribute="centerY" secondItem="VSn-hE-I70" secondAttribute="centerY" id="8qV-1P-oNE"/>
@@ -79,6 +90,8 @@
                     <constraint firstItem="HZh-9J-fQV" firstAttribute="top" secondItem="M3f-Zm-Rtr" secondAttribute="top" constant="15" id="TPi-53-5KK"/>
                     <constraint firstItem="1pn-O4-Hak" firstAttribute="centerY" secondItem="uBd-E0-Dvt" secondAttribute="centerY" id="TUa-Bj-Dwp"/>
                     <constraint firstItem="M3f-Zm-Rtr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="URa-mW-lUf"/>
+                    <constraint firstItem="PeK-Vf-KJu" firstAttribute="centerY" secondItem="f2D-sf-7CM" secondAttribute="centerY" id="atb-zy-nEB"/>
+                    <constraint firstItem="PeK-Vf-KJu" firstAttribute="centerX" secondItem="f2D-sf-7CM" secondAttribute="centerX" id="cSQ-4W-9Zr"/>
                     <constraint firstAttribute="bottom" secondItem="VSn-hE-I70" secondAttribute="bottom" constant="6.5" id="eH6-KZ-WXn"/>
                     <constraint firstItem="VSn-hE-I70" firstAttribute="leading" secondItem="HZh-9J-fQV" secondAttribute="leading" id="gQN-gr-NeP"/>
                     <constraint firstItem="1pn-O4-Hak" firstAttribute="leading" secondItem="uBd-E0-Dvt" secondAttribute="trailing" constant="5" id="yaQ-Cn-sZY"/>

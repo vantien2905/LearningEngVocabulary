@@ -13,26 +13,42 @@ class ListUnitViewModel {
     
     var outputs = ListUnitOutput()
     var inputs = ListUnitInput()
-    let bag = DisposeBag()
+    let disposeBag = DisposeBag()
     
     //input -- VC -> VM
     class ListUnitInput {
-        var idWordBook: String?
+        var idWordBook: Variable<String?> = Variable<String?>(nil)
+//        var isDownloadUnit: Variable<Bool> = Variable<Bool>(false)
+        var idUnit: Variable<String?> = Variable<String?>(nil)
     }
     
     func setIdWordbook(idWordBook: String?) {
-        self.inputs.idWordBook = idWordBook
+        self.inputs.idWordBook.value = idWordBook
     }
     
     // output VM -> VC
     class ListUnitOutput {
         var listUnit = Variable<[LEVUnit]>([])
         var errorMessage = PublishSubject<String>()
+        var listVocabulary = Variable<[Vocabulary]>([])
     }
     
     func getAllUnit() {
         getUnitOffline()
         getUnitOnline()
+    }
+    
+    init() {
+        inputs.idWordBook.asObservable().subscribe(onNext: {[weak self] (_) in
+             self?.getAllUnit()
+        }).disposed(by: disposeBag)
+        self.inputs.idUnit.asObservable().subscribe(onNext: {[weak self] (_) in
+            
+            if let _idUnit = self?.inputs.idUnit.value {
+                self?.downloadUnit(idUnit: _idUnit)
+            }
+            
+        })
     }
     
 }
@@ -41,10 +57,9 @@ extension ListUnitViewModel {
     
     private func getUnitOffline() {
         
-        let unitOffline = KRealmHelper.shared.dbObjects(LEVUnit.self)
-            .toArray(ofType: LEVUnit.self)
+        let unitOffline = KRealmHelper.shared.dbObjects(LEVUnit.self).toArray(ofType: LEVUnit.self)
             .filter { unit -> Bool in
-                return unit.idWordBook == inputs.idWordBook
+                return unit.idWordBook == inputs.idWordBook.value
         }
     
         if !unitOffline.isEmpty {
@@ -57,7 +72,7 @@ extension ListUnitViewModel {
     }
     
     private func getUnitOnline() {
-        guard let id = inputs.idWordBook else { return }
+        guard let id = inputs.idWordBook.value else { return }
         
         APIProvider(target: APIListUnit.getAllListUnit(idWordBook: id))
             .rxRequestArray(LEVUnit.self)
@@ -69,7 +84,7 @@ extension ListUnitViewModel {
                 }
             }, onError: { error in
                 self.outputs.errorMessage.onNext(error.localizedDescription)
-            }).disposed(by: bag)
+            }).disposed(by: disposeBag)
     }
     
     private func downLoadImageUnit(listUnit: [LEVUnit]) {
@@ -81,9 +96,18 @@ extension ListUnitViewModel {
                     if tempCount == listUnit.count {
                         KRealmHelper.shared.dbAddObjects(listUnit, update: true)
                     }
-                }).disposed(by: bag)
+                }).disposed(by: disposeBag)
             }
         }
         
+    }
+    
+    private func downloadUnit(idUnit: String) {
+        APIProvider(target: APIUnitDetail.getUnitDetail(idListUnit: idUnit))
+            .rxRequestArray(Vocabulary.self).subscribe(onNext: {[weak self] listVocabulary in
+                KRealmHelper.shared.dbAddObjects(listVocabulary, update: true)
+                self?.outputs.listVocabulary.value = listVocabulary
+                print("success downoad")
+            }).disposed(by: disposeBag)
     }
 }

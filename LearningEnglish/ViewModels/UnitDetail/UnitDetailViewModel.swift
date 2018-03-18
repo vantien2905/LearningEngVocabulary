@@ -13,7 +13,7 @@ class UnitDetailViewModel {
     let disposeBag = DisposeBag()
     
     class UnitDetailInput {
-        
+        var idListUnit = Variable<String>("")
     }
     
     class UnitDetailOutput {
@@ -25,10 +25,15 @@ class UnitDetailViewModel {
     
     init() {
         getAllVocabulary()
+        inputs.idListUnit.asObservable().subscribe(onNext: { [weak self](_) in
+            self?.getAllVocabulary()
+        }).disposed(by: disposeBag)
     }
     
     func getListVocabularyOffline() {
-        let listVocabulary = KRealmHelper.shared.dbObjects(Vocabulary.self).toArray(ofType: Vocabulary.self)
+        let listVocabulary = KRealmHelper.shared.dbObjects(Vocabulary.self).toArray(ofType: Vocabulary.self).filter { (word) -> Bool in
+            return word.idUnit == inputs.idListUnit.value
+        }
         if !listVocabulary.isEmpty {
             let vocabularyToShow = listVocabulary.map { unit -> Vocabulary in
                 let vocabulary = Vocabulary(num: unit.num, english: unit.english, vnRaw: unit.vnRaw, example: unit.example, vietnamese: unit.vietnamese, idUnit: unit.idUnit, thumbUrl: unit.thumbUrl, voice: unit.voice)
@@ -38,16 +43,15 @@ class UnitDetailViewModel {
         }
     }
     
-    func getListVocabularyOnline() {
-        APIProvider(target: APIUnitDetail.getUnitDetail(idListUnit: "u1_1"))
-            .rxRequestArray(Vocabulary.self).subscribe(onNext: { listVocabulary in
-                KRealmHelper.shared.dbAddObjects(listVocabulary, update: true)
-                self.outputs.listVocabulary.value = listVocabulary
+    func getListVocabularyOnline(idListUnit: String) {
+        APIProvider(target: APIUnitDetail.getUnitDetail(idListUnit: idListUnit))
+            .rxRequestArray(Vocabulary.self).subscribe(onNext: { [weak self] listVocabulary in
+                self?.outputs.listVocabulary.value = listVocabulary
             }).disposed(by: disposeBag)
     }
     
     func getAllVocabulary() {
         getListVocabularyOffline()
-        getListVocabularyOnline()
+        getListVocabularyOnline(idListUnit: inputs.idListUnit.value)
     }
 }

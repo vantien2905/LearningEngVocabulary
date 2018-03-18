@@ -37,11 +37,11 @@ class ListUnitViewController: LEVBaseViewController {
     }
     
     private func vmBindToVC() {
-        vmListUnit.getAllUnit()
         
         vmListUnit.outputs.listUnit.asObservable().bind(to: tbBook.rx.items) { table, _, unit in
             let cell = table.dequeueCustomCell(ListUnitTableViewCell.self)
             cell.bindData(data: unit)
+            cell.delegate = self
             return cell
         }.disposed(by: bag)
     }
@@ -52,6 +52,7 @@ extension ListUnitViewController: UITableViewDelegate {
     func configureTable() {
         tbBook.registerCustomCell(ListUnitTableViewCell.self, fromNib: true)
         tbBook.delegate = self
+        tbBook.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 30, right: 0)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -59,7 +60,16 @@ extension ListUnitViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UnitDetailViewController.initFromNib()
+        let idUnit = vmListUnit.outputs.listUnit.value[indexPath.item].idUnit&
+        let listVocabulary = vmListUnit.outputs.listVocabulary.value
+        let vc = UnitDetailViewController.configureViewController(idUnit: idUnit, listVocabulary: listVocabulary)
+        
         self.push(controller: vc)
+    }
+}
+
+extension ListUnitViewController: ListUnitTableViewCellDelegate {
+    func isDownloadUnit(idUnit: String?) {
+        self.vmListUnit.inputs.idUnit.value = idUnit
     }
 }

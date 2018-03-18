@@ -14,7 +14,7 @@
             <connections>
                 <outlet property="btnGame" destination="47t-ar-Lmg" id="E5y-Gm-oSa"/>
                 <outlet property="btnPractice" destination="rH4-DC-Ta7" id="NTb-cF-p1F"/>
-                <outlet property="btnTranslate" destination="8r8-CO-Vfa" id="x2n-Q6-cni"/>
+                <outlet property="btnTranslate" destination="8r8-CO-Vfa" id="LXS-E7-A69"/>
                 <outlet property="heighVContent" destination="Xpk-bG-K3j" id="rc7-S5-y6e"/>
                 <outlet property="lbVocabulary" destination="lGk-30-zcV" id="KEu-7u-po1"/>
                 <outlet property="tbUnit" destination="cUX-Hz-qsu" id="7RW-pY-xbG"/>
@@ -65,6 +65,9 @@
                                 <constraint firstAttribute="width" constant="120" id="UfN-Ek-Nnm"/>
                             </constraints>
                             <state key="normal" title="Don't translate"/>
+                            <connections>
+                                <action selector="btnTranslateTapped" destination="-1" eventType="touchUpInside" id="FB7-nI-SMT"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Tt-4f-AzW">
                             <rect key="frame" x="0.0" y="99" width="375" height="1"/>
